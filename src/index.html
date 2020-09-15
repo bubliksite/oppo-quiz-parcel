@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>OPPO-QUIZ</title>
+</head>
+<body>
+
+<section id="main">
+    <div class="h-100 d-flex justify-content-center align-items-center">
+        <button type="button" class="btn" data-toggle="modal" data-target="#quizModal">Play Quiz</button>
+    </div>
+</section>
+
+<div class="modal fade" id="quizModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+     aria-labelledby="quizModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="d-flex pt-1 pr-2 justify-content-end">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="welcomeScreen" class="d-flex px-5 align-items-center justify-content-start">
+                    <div class="">
+                        <div class="" style="padding-right: 30%">
+                            <p class="font-weight-bold">
+                                Какой ты танец? Отвязный флэксинг или классический балет?
+                                Проверим?
+                            </p>
+                            <p>
+                                7 дней недели и 7 движений, что они о тебе расскажут? В понедельник ты входишь в
+                                новую неделю на high heels или еще с выходных лежишь в дропе? В пятницу ты дрэг-квин или
+                                ловишь «выключенные биты» регги?
+                            </p>
+                        </div>
+
+                        <div class="mt-5 w-100 text-center">
+                            <button id="goFromMainScreen" type="button" class="btn">Вперед</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="questionsScreen" class="" style="display: none;">
+                    <div id="question1" class="question-block animate__animated animate__fadeInDown"
+                         style="display: block;">
+                        <h2 class="text-center">Понедельник</h2>
+                        <p class="text-center lead">Как начнем? Bone-breaking или тихим catwalk?</p>
+                        <div class="row">
+                            <div id="case1a1" class="case pl-4 col-md-6 text-center">
+                                <img src="img/tim-gouw-tYpp-eIZH44-unsplash.jpg" alt="">
+                                <p>Bone-breaking</p>
+                            </div>
+                            <div id="case1a2" class="case pr-4 col-md-6 text-center">
+                                <img src="img/drew-colins-LIEQsu5JuoM-unsplash.jpg" alt="">
+                                <p>Catwalk</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="question2" class="question-block animate__animated animate__fadeInDown"
+                         style="display: none;">
+                        <h1 class="text-center">Вопрос 2</h1>
+                        <p class="text-center">
+                            Вторник. Никак не встать из понедельничного дропа? Или ты уже с утра
+                            в режиме поппинг?
+                        </p>
+                        <div class="row">
+                            <div id="case2a1" class="case p-4 col-md-6 text-center">
+                                <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                <p>Popping</p>
+                            </div>
+                            <div id="case2a2" class="case p-4 col-md-6 text-center">
+                                <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                <p>Drop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="question3" class="question-block animate__animated animate__fadeInDown"
+                         style="display: none;">
+                        <h1 class="text-center">Вопрос 3</h1>
+                        <p class="text-center">Пятница. Ты сегодня дрэг-квин или умирающиц лебедь?</p>
+                        <div class="row">
+                            <div id="case3a1" class="case p-4 col-md-6 text-center">
+                                <img src="img/tim-gouw-tYpp-eIZH44-unsplash.jpg" alt="">
+                                <p>Drag-queen</p>
+                            </div>
+                            <div id="case3a2" class="case p-4 col-md-6 text-center">
+                                <img src="img/angelos-michalopoulos-DgKV3HmmguU-unsplash.jpg" alt="">
+                                <p>Black Swan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="finalScreen" class="px-5 align-items-center justify-content-center"
+                     style="height: 90vh; display: none;">
+                    <div class="">
+                        <h2 class="">
+                            Больше вариантов <span id="answerSpan">A</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+<script src="components/quiz.js"></script>
+</body>
+</html>
