@@ -1,1 +1,37 @@
 $green: #046a38;
+
+@mixin font-oppo-bold {
+  font-family: 'OPPOSans B', sans-serif;
+  font-weight: bold;
+}
+
+@mixin font-oppo-normal {
+  font-family: 'OPPOSans R', sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-caveat-normal {
+  font-family: 'Caveat', "Lucida Handwriting", serif;
+}
+
+@for $i from 5 through 1 {
+  header {
+    nav {
+      li:nth-child(#{$i}) {
+        animation-delay: $i/($i*$i) + s;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 7 {
+  #partners {
+    div {
+      div {
+        img:nth-child(#{$i}) {
+          animation-delay: $i/8 + s;
+        }
+      }
+    }
+  }
+}
