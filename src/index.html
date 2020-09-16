@@ -243,53 +243,29 @@
                                 </script>
                                 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
                             </div>
-                            <form id="feedbackForm" method="get" action="/">
+                            <form id="feedbackForm" method="get" action="">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Имя">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="phone" placeholder="Telephone">
+                                    <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="phone" placeholder="Telephone" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="link" name="link" placeholder="Ссылка на пост">
+                                    <input type="text" class="form-control" id="link" name="link" placeholder="Ссылка на пост" required>
                                 </div>
                                 <button type="submit"  class="btn btn-primary">Отправить</button>
                             </form>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
-    <script src="components/quiz.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#feedbackForm').submit(function() {
-                var name = $("#name").val();
-                var phone = $("#phone").val();
-                var email = $("#email").val();
-                var link = $("#link").val();
-                var http = new XMLHttpRequest();
-                var urlq = "https://script.google.com/macros/s/AKfycbyWOsRG0IsA228rcNNXfr23lFYthDh0eV_RuUDN_zQm3j_Oi2nT/exec";
-                var params = "p1="+name+"&p2="+phone+"&p3="+email+"&p4="+link;
-                http.open("GET", urlq+"?"+params, true);
-                http.onreadystatechange = function() {
-                    if(http.readyState == 4 && http.status == 200) {
-                        alert("Dct хорошо");
-                    }
-                }
-                http.send(null);
-            });
-        });
-    </script>
+    <script src="components/handler-form.js"></script>
     </body>
 </html>
