@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "quiz";
+@import "~rfs/scss";
 
 body{
   * {
@@ -24,13 +25,47 @@ body{
   header {
     height: 8vh;
     nav {
+      div {
+        #menu-button {
+          display: none;
+          @media screen and (max-width: 992px) {
+            display: block;
+          }
+        }
+      }
       li {
         a {
           @include font-oppo-bold;
-          font-size: 12px;
           color: #000 !important;
+          font-size: 12px;
+          @media screen and (min-width: 2300px) {
+            font-size: 18px;
+          }
         }
       }
+    }
+  }
+  
+  #mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 11;
+    a {
+      @include font-oppo-bold;
+      color: #000 !important;
+      font-size: 21px;
+      img {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+      }
+    }
+    li {
+      padding-bottom: .5rem;
     }
   }
 
@@ -42,20 +77,116 @@ body{
       overflow: hidden;
       div {
         div {
+          z-index: 9;
           h1 {
             animation-delay: 1s;
             @include font-caveat-normal;
             font-size: 62px;
             line-height: 78px;
+            @media screen and (min-width: 2300px) {
+              font-size: 92px;
+              line-height: 118px;
+            }
+            @media screen and (max-width: 992px){
+              font-size: 50px;
+              line-height: 60px;
+            }
           }
           p.lead {
             animation-delay: 1.2s;
             font-size: 18px;
             line-height: 27px;
+            @media screen and (min-width: 2300px) {
+              font-size: 24px;
+              line-height: 38px;
+            }
+            @media screen and (max-width: 992px) {
+              font-size: 18px;
+              line-height: 30px;
+            }
           }
           button {
             animation-delay: 1.4s;
+            z-index: 9;
+            @media screen and (min-width: 2300px) {
+              font-size: 24px;
+              padding: 1rem 3rem;
+              border-radius: 6px;
+            }
+            @media screen and (max-width: 992px) {
+              font-size: 14px;
+            }
           }
+        }
+      }
+    }
+    #pink-girl {
+      position: absolute;
+      left: 0;
+      height: 80vh;
+      top: 0;
+      animation-delay: 1s;
+      img:nth-child(1){
+        width: 50vw;
+        @media screen and (max-width: 992px) {
+          width: 70vw;
+        }
+      }
+      img:nth-child(2) {
+        position: absolute;
+        width: 25vw;
+        @media screen and (max-width: 992px) {
+          width: 28vw;
+        }
+      }
+    }
+    #green-boy {
+      position: absolute;
+      right: 0;
+      height: 80vh;
+      top: 0;
+      animation-delay: 1s;
+      img:nth-child(1){
+        width: 50vw;
+        @media screen and (max-width: 992px) {
+          width: 70vw;
+        }
+      }
+      img:nth-child(2) {
+        position: absolute;
+        right: 0;
+        width: 30vw;
+        @media screen and (max-width: 992px) {
+          width: 35vw;
+          transform: translateY(4vw);
+        }
+      }
+    }
+    #oppo-pro {
+      position: absolute;
+      left: 25%;
+      bottom: 4vh;
+      z-index: 2;
+      animation-delay: 2s;
+      img {
+        width: 35vw;
+        @media screen and (max-width: 992px) {
+          width: 40vw;
+          transform: translateX(-5vw);
+        }
+      }
+    }
+    #oppo-lite {
+      position: absolute;
+      right: 23%;
+      bottom: 7vh;
+      z-index: 2;
+      animation-delay: 2s;
+      img {
+        width: 35vw;
+        @media screen and (max-width: 992px) {
+          width: 40vw;
+          transform: translateX(2vw);
         }
       }
     }
@@ -63,12 +194,46 @@ body{
       position: absolute;
       bottom: 2rem;
       animation-delay: 1s;
+      width: 50vw;
     }
     #oppo-gift {
       position: absolute;
-      bottom: 2rem;
+      bottom: .5rem;
+      z-index: 9;
+      #bg-gift {
+        width: 26vw;
+        position: absolute;
+        border-radius: 0 16px 16px 0;
+        background-color: $green;
+        bottom: 2rem;
+        left: -2rem;
+        z-index: -1;
+        height: 8vh;
+        box-shadow: -11px 9px #e5e5e5;
+        animation-delay: 2.5s;
+        @media screen and (max-width: 992px) {
+          width: 28vw;
+        }
+        a {
+          padding-left: 16.5vw;
+          font-size: 16px;
+          @media screen and (min-width: 2300px) {
+            font-size: 24px;
+          }
+          @media screen and (max-width: 1050px) {
+            font-size: 14px;
+          }
+          @media screen and (max-width: 992px) {
+            font-size: 12px;
+          }
+        }
+      }
       img {
         animation-delay: 2s;
+        width: 13vw;
+        @media screen and (max-width: 992px) {
+          width: 12vw;
+        }
       }
     }
   }
@@ -77,6 +242,12 @@ body{
     #partners {
       height: 10vh;
       background: linear-gradient(180deg, rgba(173, 186, 205, 0.5)  6.25%, rgba(212, 223, 239, 0) 100%);
+      img {
+        @media screen and (max-width: 992px) {
+          width: 4.5rem;
+          object-fit: contain;
+        }
+      }
     }
   }
 

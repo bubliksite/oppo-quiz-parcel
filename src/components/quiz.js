@@ -7,7 +7,6 @@ $('document').ready(function($) {
 
     var A = 0;
     var B = 0;
-    var whereToRedirect = '';
 
     var countOfQuestions = $('#questionsScreen').children('div').length;
 
