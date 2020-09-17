@@ -122,12 +122,13 @@ body{
     }
     #pink-girl {
       position: absolute;
-      left: 0;
+      left: -40px;
       height: 80vh;
       top: 0;
       animation-delay: 1s;
       img:nth-child(1){
         width: 50vw;
+        transition: unset;
         @media screen and (max-width: 992px) {
           width: 70vw;
         }
@@ -135,6 +136,7 @@ body{
       img:nth-child(2) {
         position: absolute;
         width: 25vw;
+        transition: unset;
         @media screen and (max-width: 992px) {
           width: 28vw;
         }
@@ -142,12 +144,13 @@ body{
     }
     #green-boy {
       position: absolute;
-      right: 0;
+      right: -40px;
       height: 80vh;
       top: 0;
       animation-delay: 1s;
       img:nth-child(1){
         width: 50vw;
+        transition: unset;
         @media screen and (max-width: 992px) {
           width: 70vw;
         }
@@ -155,7 +158,9 @@ body{
       img:nth-child(2) {
         position: absolute;
         right: 0;
+        left: unset !important;
         width: 30vw;
+        transition: unset;
         @media screen and (max-width: 992px) {
           width: 35vw;
           transform: translateY(4vw);
@@ -170,6 +175,7 @@ body{
       animation-delay: 2s;
       img {
         width: 35vw;
+        transition: unset;
         @media screen and (max-width: 992px) {
           width: 40vw;
           transform: translateX(-5vw);
@@ -184,6 +190,7 @@ body{
       animation-delay: 2s;
       img {
         width: 35vw;
+        transition: unset;
         @media screen and (max-width: 992px) {
           width: 40vw;
           transform: translateX(2vw);
@@ -201,7 +208,7 @@ body{
       bottom: .5rem;
       z-index: 9;
       #bg-gift {
-        width: 26vw;
+        width: 20vw;
         position: absolute;
         border-radius: 0 16px 16px 0;
         background-color: $green;
@@ -215,7 +222,7 @@ body{
           width: 28vw;
         }
         a {
-          padding-left: 18vw;
+          padding-left: 13vw;
           font-size: 16px;
           @media screen and (min-width: 2300px) {
             font-size: 24px;
