@@ -79,8 +79,8 @@
             </div>
         </div>
         <div id="pink-girl" class="d-flex align-items-center animate__animated animate__fadeInLeft">
-            <img src="img/pink-cloud.png" alt="">
-            <img src="img/Girl%201.png" alt="">
+            <img src="img/pink-cloud.png" alt=""data-depth="0.2" >
+            <img src="img/Girl%201.png" alt=""data-depth="0.8" >
         </div>
         <div id="oppo-pro" class="animate__animated animate__fadeIn">
             <img src="img/PRO.png" alt="">
@@ -324,6 +324,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script src="components/parallax.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
     <script src="components/handler-form.js"></script>
     <div id="bg-modal" class=""></div>
     </body>
