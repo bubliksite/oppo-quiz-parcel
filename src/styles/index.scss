@@ -73,6 +73,9 @@ body{
     height: 82vh;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: 320px) {
+      height: 80vh;
+    }
     .container {
       overflow: hidden;
       div {
@@ -91,9 +94,20 @@ body{
               font-size: 60px;
               line-height: 60px;
             }
-            @media screen and (max-width: 576px){
+            @media screen and (max-width: 768px) and (orientation: landscape) {
               font-size: 50px;
-              line-height: 60px;
+              line-height: 40px;
+            }
+            @media screen and (max-width: 576px) and (orientation: portrait){
+              font-size: 40px;
+              line-height: 50px;
+            }
+            @media screen and (max-width: 415px) {
+              font-size: 30px;
+              line-height: 35px;
+            }
+            @media screen and (max-width: 320px) {
+              font-size: 20px;
             }
           }
           p.lead {
@@ -112,9 +126,23 @@ body{
               padding-right: 20vw;
               padding-left: 20vw;
             }
-            @media screen and (max-width: 576px) {
+            @media screen and (max-width: 768px) and (orientation: landscape) {
+              padding-left: 3vw;
+              padding-right: 3vw;
+              font-size: 12px;
+              line-height: 18px;
+            }
+            @media screen and (max-width: 576px) and (orientation: portrait) {
               padding-right: 15vw;
               padding-left: 15vw;
+            }
+            @media screen and (max-width: 415px) {
+              font-size: 15px;
+              line-height: 20px;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 12px;
+              line-height: 15px;
             }
           }
           button {
@@ -131,8 +159,14 @@ body{
             @media screen and (max-width: 768px) {
               margin-top: 3rem !important;
             }
-            @media screen and (max-width: 576px) {
+            @media screen and (max-width: 768px) and (orientation: landscape) {
+              margin-top: 0 !important;
+            }
+            @media screen and (max-width: 576px) and (orientation: portrait) {
               margin-top: 1.5rem !important;
+            }
+            @media screen and (max-width: 415px) {
+              margin-top: 0 !important;
             }
           }
         }
@@ -147,18 +181,28 @@ body{
       @media screen and (max-width: 768px) {
         top: -6rem !important;
       }
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 576px) and (orientation: portrait) {
         top: 0rem !important;
       }
       img:nth-child(1){
         width: 50vw;
         transition: unset;
+        @media screen and (max-width: 1100px) and (orientation: portrait) {
+          top: -25vh !important;
+        }
         @media screen and (max-width: 992px) {
           width: 70vw;
         }
         @media screen and (max-width: 768px) {
           width: 50vw;
           top: -8rem !important;
+        }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          width: 40vw;
+          top: 20vh !important;
+        }
+        @media screen and (max-width: 320px) {
+          top: -5rem !important;
         }
       }
       img:nth-child(2) {
@@ -171,8 +215,11 @@ body{
         @media screen and (max-width: 768px) {
           top: 6rem !important;
         }
-        @media screen and (max-width: 576px) {
-          top: 8rem !important;
+          @media screen and (max-width: 768px) and (orientation: landscape) {
+            width: 25vw;
+          }
+        @media screen and (max-width: 576px) and (orientation: portrait) {
+          top: 6rem !important;
         }
       }
     }
@@ -185,18 +232,28 @@ body{
       @media screen and (max-width: 768px) {
         top: -6rem !important;
       }
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 576px) and (orientation: portrait) {
         top: 0rem !important;
       }
       img:nth-child(1){
         width: 50vw;
         transition: unset;
+        @media screen and (max-width: 1100px) and (orientation: portrait) {
+          top: -25vh !important;
+        }
         @media screen and (max-width: 992px) {
           width: 70vw;
         }
         @media screen and (max-width: 768px) {
           width: 50vw;
           top: -8rem !important;
+        }
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          width: 40vw;
+          top: 20vh !important;
+        }
+        @media screen and (max-width: 320px) {
+          top: -5rem !important;
         }
       }
       img:nth-child(2) {
@@ -212,8 +269,8 @@ body{
         @media screen and (max-width: 768px) {
           top: 6rem !important;
         }
-        @media screen and (max-width: 768px) {
-          top: 8rem !important;
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          width: 30vw;
         }
       }
     }
@@ -226,6 +283,15 @@ body{
       img {
         width: 35vw;
         transition: unset;
+        @media screen and (max-width: 1100px) and (orientation: portrait) {
+          width: 70vw;
+          left: -30vw !important;
+          top: -15vh !important;
+        }
+        @media screen and (max-width: 1050px) and (max-height: 768px) and (orientation: landscape) {
+          left: -10vw !important;
+          top: -5vh !important;
+        }
         @media screen and (max-width: 992px) {
           width: 40vw;
           transform: translateX(-5vw);
@@ -235,13 +301,18 @@ body{
           top: -5vh !important;
           left: -30vw !important;
         }
-        @media screen and (max-width: 1050px) and (max-height: 768px) and (orientation: landscape) {
-          left: -10vw !important;
-          top: -5vh !important;
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          width: 35vw;
+          top: -3vh !important;
+          left: -8vw !important;
         }
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) and (orientation: portrait) {
           left: -25vw !important;
           top: -15vh !important;
+        }
+        @media screen and (max-width: 320px) {
+          width: 65vw;
+          top: -3.5rem !important;
         }
       }
     }
@@ -254,6 +325,14 @@ body{
       img {
         width: 35vw;
         transition: unset;
+        @media screen and (max-width: 1100px) and (orientation: portrait) {
+          width: 70vw;
+          left: 25vw !important;
+          top: -10vh !important;
+        }
+        @media screen and (max-width: 1050px) and (orientation: landscape) {
+          top: -8vh !important;
+        }
         @media screen and (max-width: 992px) {
           width: 40vw;
           transform: translateX(2vw);
@@ -263,13 +342,23 @@ body{
           top: -10vh !important;
           left: 20vw !important;
         }
-        @media screen and (max-width: 1050px) and (max-height: 768px) and (orientation: landscape) {
-          top: -8vh !important;
+        @media screen and (max-width: 768px) and (orientation: landscape) {
+          width: 35vw;
+          top: 0 !important;
+          left: 5vw !important;
         }
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) and (orientation: portrait) {
           width: 70vw;
           left: 25vw !important;
           top: -15vh !important;
+        }
+        @media screen and (max-width: 320px) {
+          top: -4rem !important;
+          width: 60vw;
+        }
+        @media screen and (max-width: 320px) {
+          width: 65vw;
+          top: -3.5rem !important;
         }
       }
     }
@@ -278,11 +367,18 @@ body{
       bottom: 2rem;
       animation-delay: 1s;
       width: 50vw;
+      @media screen and (max-width: 1100px) and (orientation: portrait) {
+        width: 70vw;
+        bottom: 20vh;
+      }
       @media screen and (max-width: 768px) {
         width: 65vw;
         bottom: 14vh;
       }
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        width: 25vw;
+      }
+      @media screen and (max-width: 576px) and (orientation: portrait) {
         width: 80vw;
         bottom: 25vh;
       }
@@ -291,8 +387,11 @@ body{
       position: absolute;
       bottom: .5rem;
       z-index: 9;
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 576px) and (orientation: portrait) {
         bottom: 3vh;
+      }
+      @media screen and (max-width: 320px) {
+        bottom: 4vh;
       }
       #bg-gift {
         width: 23vw;
@@ -305,6 +404,9 @@ body{
         height: 8vh;
         box-shadow: -11px 9px #e5e5e5;
         animation-delay: 2.5s;
+        @media screen and (max-width: 1100px) and (orientation: portrait) {
+          width: 50vw;
+        }
         @media screen and (max-width: 1050px) and (max-height: 768px) and (orientation: landscape) {
           width: 25vw;
           top: 1.2rem;
@@ -317,9 +419,16 @@ body{
           height: 4rem;
           top: 2.2rem;
         }
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) and (orientation: portrait) {
           width: 80vw;
           height: 10vh;
+        }
+        @media screen and (max-width: 375px) {
+          width: 90vw;
+        }
+        @media screen and (max-width: 320px) {
+          width: 70vw;
+          height: 8vh;
         }
         a {
           padding-left: 15vw;
@@ -327,7 +436,12 @@ body{
           @media screen and (min-width: 2300px) {
             font-size: 24px;
           }
-          @media screen and (max-width: 1050px) {
+          @media screen and (max-width: 1100px) and (orientation: portrait) {
+            padding-left: 30vw;
+            font-size: 24px;
+          }
+          @media screen and (max-width: 1050px) and (orientation: landscape) {
+            padding-left: 15vw;
             font-size: 14px;
           }
           @media screen and (max-width: 992px) {
@@ -336,29 +450,39 @@ body{
           @media screen and (max-width: 768px) {
             padding-left: 25vw;
           }
-          @media screen and (max-width: 1050px) and (max-height: 768px) and (orientation: landscape) {
-            padding-left: 15vw;
-          }
-          @media screen and (max-width: 576px) {
+          @media screen and (max-width: 576px) and (orientation: portrait) {
             padding-left: 50vw;
-            font-size: 20px;
+            font-size: 16px;
+          }
+          @media screen and (max-width: 375px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 320px) {
+            padding-left: 40vw;
+            font-size: 12px;
           }
         }
       }
       img {
         animation-delay: 2s;
         width: 13vw;
+        @media screen and (max-width: 1100px) and (orientation: portrait) {
+          width: 30vw;
+        }
+        @media screen and (max-width: 1050px) and (orientation: landscape) {
+          width: 12vw;
+        }
         @media screen and (max-width: 992px) {
           width: 12vw;
         }
         @media screen and (max-width: 768px) {
           width: 20vw;
         }
-        @media screen and (max-width: 1050px) and (max-height: 768px) and (orientation: landscape) {
-          width: 12vw;
-        }
-        @media screen and (max-width: 576px) {
+        @media screen and (max-width: 576px) and (orientation: portrait) {
           width: 40vw;
+        }
+        @media screen and (max-width: 320px) {
+          width: 35vw;
         }
       }
     }
@@ -368,10 +492,28 @@ body{
     #partners {
       height: 10vh;
       background: linear-gradient(180deg, rgba(173, 186, 205, 0.5)  6.25%, rgba(212, 223, 239, 0) 100%);
-      img {
-        @media screen and (max-width: 992px) {
-          width: 4.5rem;
-          object-fit: contain;
+      div {
+        div {
+          @media screen and (max-width: 568px) {
+            display: block !important;
+            text-align: center;
+          }
+          img {
+            @media screen and (max-width: 992px) {
+              width: 4.5rem;
+              object-fit: contain;
+            }
+            @media screen and (max-width: 568px) {
+              padding-top: 1rem;
+              padding-left: .5rem;
+            }
+            @media screen and (max-width: 375px) {
+              padding-top: .5rem;
+            }
+            @media screen and (max-width: 320px) {
+              width: 3.54rem;
+            }
+          }
         }
       }
     }

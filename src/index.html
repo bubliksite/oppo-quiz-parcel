@@ -122,185 +122,467 @@
     <div class="modal fade" id="quizModal" data-backdrop="true" data-keyboard="true" tabindex="-1"
          aria-labelledby="quizModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="d-flex pt-1 pr-2 justify-content-end">
+            <div class="modal-content overflow-hidden">
+                <div class="modal-body d-flex align-items-center justify-content-center">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                </div>
-                <div class="modal-body">
-                    <div id="welcomeScreen" class="px-5 align-items-center justify-content-start">
-                        <div class="">
-                            <div class="" style="padding-right: 30%">
-                                <p class="font-weight-bold">
-                                    Какой ты танец? Отвязный флэксинг или классический балет?
-                                    Проверим?
-                                </p>
-                                <p>
-                                    7 дней недели и 7 движений, что они о тебе расскажут? В понедельник ты входишь в
-                                    новую неделю на high heels или еще с выходных лежишь в дропе? В пятницу ты дрэг-квин или
-                                    ловишь «выключенные биты» регги?
-                                </p>
-                            </div>
-
-                            <div class="mt-5 w-100 text-center">
-                                <button id="goFromMainScreen" type="button" class="btn">Вперед</button>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div id="questionsScreen" class="px-5" style="display: none;">
-                        <div id="question1" class="question-block animate__animated animate__fadeInDown"
-                             style="display: block;">
-                            <h2 class="text-center">Понедельник</h2>
-                            <p class="text-center pb-3">Как начнем? Bone-breaking или тихим catwalk?</p>
-                            <div class="row">
-                                <a href="#0" class="col-md-6 text-center">
-                                    <div id="case1a1" class="case">
-                                        <img src="img/tim-gouw-tYpp-eIZH44-unsplash.jpg" alt="">
-                                        <p class="my-2">Bone-breaking</p>
-                                    </div>
-                                </a>
-                                <a href="#0" class="col-md-6 text-center">
-                                    <div id="case1a2" class="case">
-                                        <img src="img/drew-colins-LIEQsu5JuoM-unsplash.jpg" alt="">
-                                        <p class="my-2">Catwalk</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-                        <div id="question2" class="question-block animate__animated animate__fadeInDown"
-                             style="display: none;">
-                            <h1 class="text-center">Вопрос 2</h1>
-                            <p class="text-center">
-                                Вторник. Никак не встать из понедельничного дропа? Или ты уже с утра
-                                в режиме поппинг?
+                    <div class="container">
+                        <div id="welcomeScreen" class="text-center h-100">
+                            <p class="lead font-weight-bold">
+                                7 дней недели и 7 танцевальных элементов, <br> что они о тебе расскажут?
                             </p>
-                            <div class="row">
-                                <div id="case2a1" class="case p-4 col-md-6 text-center">
-                                    <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
-                                    <p>Popping</p>
+                            <p class="w-50 mx-auto">
+                                Ты — выразительный контемпорари или&nbsp;нежная кизомба?
+                                Энергичный хип-хоп или&nbsp;экстремальный брейк-данс? В&nbsp;понедельник ты&nbsp;входишь
+                                в&nbsp;новую неделю движением kick или&nbsp;еще&nbsp;с&nbsp;выходных лежишь в&nbsp;drop?
+                                В&nbsp;пятницу ты&nbsp;дрэг-квин или&nbsp;смотришь на&nbsp;мир, стоя на&nbsp;голове?
+                            </p>
+                            <button id="goFromMainScreen" type="button" class="btn mt-5">Начать</button>
+                        </div>
+                        <div id="questionsScreen" class="px-5 mx-auto text-center" style="display: none;">
+                            <div id="question1" class="question-block"
+                                 style="display: block;">
+                                <p class="lead">Понедельник</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case1a1" class="case B">
+                                            <img src="img/tim-gouw-tYpp-eIZH44-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Брейк</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case1a2" class="case D">
+                                            <img src="img/drew-colins-LIEQsu5JuoM-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Контемпорари</p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div id="case2a2" class="case p-4 col-md-6 text-center">
-                                    <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
-                                    <p>Drop</p>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="question2" class="question-block"
+                                 style="display: none;">
+                                <p class="lead">Вторник</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case2a1" class="case A">
+                                            <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец3</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case2a2" class="case B">
+                                            <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец4</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="question3" class="question-block animate__animated animate__fadeInDown"
+                                 style="display: none;">
+                                <p class="lead">Среда</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case3a1" class="case C">
+                                            <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец5</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case3a2" class="case D">
+                                            <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец6</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="question4" class="question-block animate__animated animate__fadeInDown"
+                                 style="display: none;">
+                                <p class="lead">Четверг</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case4a1" class="case C">
+                                            <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец7</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case4a2" class="case B">
+                                            <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец8</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="question5" class="question-block animate__animated animate__fadeInDown"
+                                 style="display: none;">
+                                <p class="lead">Пятница</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case5a1" class="case A">
+                                            <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец9</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case5a2" class="case B">
+                                            <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец10</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="question6" class="question-block animate__animated animate__fadeInDown"
+                                 style="display: none;">
+                                <p class="lead">Суббота</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case6a1" class="case C">
+                                            <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец11</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case6a2" class="case D">
+                                            <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец12</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="question7" class="question-block animate__animated animate__fadeInDown"
+                                 style="display: none;">
+                                <p class="lead">Воскресенье</p>
+                                <p class="text-center pb-3">
+                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
+                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
+                                    контемпорари. Решаешь только ты.
+                                </p>
+                                <div class="row">
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case7a1" class="case A">
+                                            <img src="img/leon-liu-8E80yYnp87k-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец13</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#0" class="col-md-6 text-center">
+                                        <div id="case7a2" class="case B">
+                                            <img src="img/isaiah-mcclean-j9PpIy_x4EE-unsplash.jpg" alt="">
+                                            <div class="text-center py-3">
+                                                <p class="m-0">Танец14</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3">
+                                            <button id="button-back" class="btn w-100">Назад</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="question3" class="question-block animate__animated animate__fadeInDown"
+                        <div id="finalScreen" class="px-5 align-items-center justify-content-center"
                              style="display: none;">
-                            <h1 class="text-center">Вопрос 3</h1>
-                            <p class="text-center">Пятница. Ты сегодня дрэг-квин или умирающиц лебедь?</p>
-                            <div class="row">
-                                <div id="case3a1" class="case p-4 col-md-6 text-center">
-                                    <img src="img/tim-gouw-tYpp-eIZH44-unsplash.jpg" alt="">
-                                    <p>Drag-queen</p>
-                                </div>
-                                <div id="case3a2" class="case p-4 col-md-6 text-center">
-                                    <img src="img/angelos-michalopoulos-DgKV3HmmguU-unsplash.jpg" alt="">
-                                    <p>Black Swan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="finalScreen" class="px-5 align-items-center justify-content-center"
-                         style="display: none;">
-                        <div class="">
-                            <img src="img/bg-modal.png" alt="">
-                            <h2 class="">
-                                Больше вариантов <span id="answerSpan">A</span>
-                            </h2>
-                            <p>Смотри презентацию новой серии смартфонов OPPO Reno4! Участвуй в конкурсе и получи шанс выиграть OPPO Reno4 Light!</p>
-                            <div id="shareButtonsA">
-                                <!-- VK SHARE -->
-                                <script type="text/javascript">
-                                    document.write(VK.Share.button({
-                                            url: 'http://oppo.bublik.site/redir-a.html',
-                                            title: 'Результат А',
-                                            image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                        },
-                                        {
-                                            type: "custom", text: "Вконтакте"
-                                        }));
-                                </script>
-                                <!-- FACEBOOK SHARE -->
-                                <div id="ShareFbA">Facebook</div>
-                                <script>
-                                    document.getElementById('ShareFbA').onclick = function() {
-                                        FB.ui({
-                                            method: 'feed',
-                                            link: 'https://oppo.bublik.site/redir-a.html'
-                                        }, function(response){});
-                                    }
+                            <div class="">
+                                <img src="img/bg-modal.png" alt="">
+                                <h2 class="">
+                                    Больше вариантов <span id="answerSpan">A</span>
+                                </h2>
+                                <p>Смотри презентацию новой серии смартфонов OPPO Reno4! Участвуй в конкурсе и получи шанс выиграть OPPO Reno4 Light!</p>
+                                <div id="shareButtonsA">
+                                    <!-- VK SHARE -->
+                                    <script type="text/javascript">
+                                        document.write(VK.Share.button({
+                                                url: 'http://oppo.bublik.site/redir-a.html',
+                                                title: 'Результат А',
+                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                            },
+                                            {
+                                                type: "custom", text: "Вконтакте"
+                                            }));
+                                    </script>
+                                    <!-- FACEBOOK SHARE -->
+                                    <div id="ShareFbA">Facebook</div>
+                                    <script>
+                                        document.getElementById('ShareFbA').onclick = function() {
+                                            FB.ui({
+                                                method: 'feed',
+                                                link: 'https://oppo.bublik.site/redir-a.html'
+                                            }, function(response){});
+                                        }
 
-                                </script>
-                                <script>
-                                    window.fbAsyncInit = function() {
-                                        FB.init({
-                                            appId            : '957863797958595',
-                                            autoLogAppEvents : true,
-                                            xfbml            : true,
-                                            version          : 'v8.0'
-                                        });
-                                    };
-                                </script>
-                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                            </div>
-                            <div id="shareButtonsB">
-                                <!-- VK SHARE -->
-                                <script type="text/javascript">
-                                    document.write(VK.Share.button({
-                                            url: 'http://oppo.bublik.site/redir-b.html',
-                                            title: 'Результат B',
-                                            image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                        },
-                                        {
-                                            type: "custom", text: "Вконтакте"
-                                        }));
-                                </script>
-                                <!-- FACEBOOK SHARE -->
-                                <div id="ShareFbB">Facebook</div>
-                                <script>
-                                    document.getElementById('ShareFbB').onclick = function() {
-                                        FB.ui({
-                                            method: 'feed',
-                                            link: 'https://oppo.bublik.site/redir-b.html'
-                                        }, function(response){});
-                                    }
+                                    </script>
+                                    <script>
+                                        window.fbAsyncInit = function() {
+                                            FB.init({
+                                                appId            : '957863797958595',
+                                                autoLogAppEvents : true,
+                                                xfbml            : true,
+                                                version          : 'v8.0'
+                                            });
+                                        };
+                                    </script>
+                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                </div>
+                                <div id="shareButtonsB">
+                                    <!-- VK SHARE -->
+                                    <script type="text/javascript">
+                                        document.write(VK.Share.button({
+                                                url: 'http://oppo.bublik.site/redir-b.html',
+                                                title: 'Результат B',
+                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                            },
+                                            {
+                                                type: "custom", text: "Вконтакте"
+                                            }));
+                                    </script>
+                                    <!-- FACEBOOK SHARE -->
+                                    <div id="ShareFbB">Facebook</div>
+                                    <script>
+                                        document.getElementById('ShareFbB').onclick = function() {
+                                            FB.ui({
+                                                method: 'feed',
+                                                link: 'https://oppo.bublik.site/redir-b.html'
+                                            }, function(response){});
+                                        }
 
-                                </script>
-                                <script>
-                                    window.fbAsyncInit = function() {
-                                        FB.init({
-                                            appId            : '957863797958595',
-                                            autoLogAppEvents : true,
-                                            xfbml            : true,
-                                            version          : 'v8.0'
-                                        });
-                                    };
-                                </script>
-                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                    </script>
+                                    <script>
+                                        window.fbAsyncInit = function() {
+                                            FB.init({
+                                                appId            : '957863797958595',
+                                                autoLogAppEvents : true,
+                                                xfbml            : true,
+                                                version          : 'v8.0'
+                                            });
+                                        };
+                                    </script>
+                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                </div>
+                                <div id="shareButtonsC">
+                                    <!-- VK SHARE -->
+                                    <script type="text/javascript">
+                                        document.write(VK.Share.button({
+                                                url: 'http://oppo.bublik.site/redir-c.html',
+                                                title: 'Результат B',
+                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                            },
+                                            {
+                                                type: "custom", text: "Вконтакте"
+                                            }));
+                                    </script>
+                                    <!-- FACEBOOK SHARE -->
+                                    <div id="ShareFbC">Facebook</div>
+                                    <script>
+                                        document.getElementById('ShareFbC').onclick = function() {
+                                            FB.ui({
+                                                method: 'feed',
+                                                link: 'https://oppo.bublik.site/redir-c.html'
+                                            }, function(response){});
+                                        }
+
+                                    </script>
+                                    <script>
+                                        window.fbAsyncInit = function() {
+                                            FB.init({
+                                                appId            : '957863797958595',
+                                                autoLogAppEvents : true,
+                                                xfbml            : true,
+                                                version          : 'v8.0'
+                                            });
+                                        };
+                                    </script>
+                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                </div>
+                                <div id="shareButtonsD">
+                                    <!-- VK SHARE -->
+                                    <script type="text/javascript">
+                                        document.write(VK.Share.button({
+                                                url: 'http://oppo.bublik.site/redir-d.html',
+                                                title: 'Результат B',
+                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                            },
+                                            {
+                                                type: "custom", text: "Вконтакте"
+                                            }));
+                                    </script>
+                                    <!-- FACEBOOK SHARE -->
+                                    <div id="ShareFbD">Facebook</div>
+                                    <script>
+                                        document.getElementById('ShareFbD').onclick = function() {
+                                            FB.ui({
+                                                method: 'feed',
+                                                link: 'https://oppo.bublik.site/redir-d.html'
+                                            }, function(response){});
+                                        }
+
+                                    </script>
+                                    <script>
+                                        window.fbAsyncInit = function() {
+                                            FB.init({
+                                                appId            : '957863797958595',
+                                                autoLogAppEvents : true,
+                                                xfbml            : true,
+                                                version          : 'v8.0'
+                                            });
+                                        };
+                                    </script>
+                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                </div>
+                                <form id="feedbackForm" method="get" action="">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
+                                        <small id="nameHelp" class="form-text "></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="phone" placeholder="Telephone" required>
+                                        <small id="phoneHelp" class="form-text "></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email" required>
+                                        <small id="emailHelp" class="form-text "></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="link" name="link" placeholder="Ссылка на пост" required>
+                                        <small id="linkHelp" class="form-text "></small>
+                                    </div>
+                                    <button type="submit" id="submit" disabled="true" class="btn">Отправить</button>
+                                </form>
                             </div>
-                            <form id="feedbackForm" method="get" action="">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
-                                    <small id="nameHelp" class="form-text "></small>
-                                </div>
-                                <div class="form-group">
-                                    <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="phone" placeholder="Telephone" required>
-                                    <small id="phoneHelp" class="form-text "></small>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email" required>
-                                    <small id="emailHelp" class="form-text "></small>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="link" name="link" placeholder="Ссылка на пост" required>
-                                    <small id="linkHelp" class="form-text "></small>
-                                </div>
-                                <button type="submit" id="submit" disabled="true" class="btn">Отправить</button>
-                            </form>
                         </div>
                     </div>
                 </div>
