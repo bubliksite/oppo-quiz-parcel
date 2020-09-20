@@ -4,6 +4,7 @@
   "description": "Draft for quiz for OPPO",
   "main": "index.pug",
   "scripts": {
+    "build": "parcel build src/index.html --no-source-maps --out-dir build",
     "dev": "parcel src/index.html --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
