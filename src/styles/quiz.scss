@@ -16,6 +16,11 @@
       top: 20px;
       right: 20px;
     }
+    .container {
+      @media screen and (max-width: 768px) {
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -24,11 +29,24 @@
     color: $green;
     font-size: 21px;
     line-height: 31px;
+    @media screen and (max-width: 768px) {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+  p:nth-child(2) {
+    @media screen and (max-width: 768px) {
+      width: 90% !important;
+    }
   }
 }
 
 #questionsScreen {
   width: 70% !important;
+  @media screen and (max-width: 768px) {
+    width: 90% !important;
+    padding: 0 !important;
+  }
   .question-block {
     p.lead {
       color: $green;
@@ -36,10 +54,26 @@
       line-height: 31px;
       font-weight: bold;
     }
+    p:nth-child(2) {
+      padding-bottom: 0 !important;
+      font-size: 13px;
+    }
+    .col-6 {
+      @media screen and (max-width: 768px) {
+        padding-left: .5rem;
+        padding-right: .5rem;
+      }
+    }
     img {
       height: 200px;
       width: 100%;
       object-fit: cover;
+      @media screen and (max-width: 768px) {
+        height: 150px;
+      }
+      @media screen and (max-width: 568px) {
+        height: 100px;
+      }
     }
     a {
       color: #000;
@@ -47,12 +81,23 @@
         color: $green;
       }
       .case {
-        padding: 5px 5px 5px 5px;
+        padding: 5px;
         background-color: #fff;
         border: 1px solid #e5e5e5;
         transition: unset;
+        @media screen and (max-width: 768px) {
+          padding: 3px;
+        }
         * {
           transition: unset;
+        }
+        p {
+          @media screen and (max-width: 568px) {
+            font-size: 14px;
+          }
+        }
+        .py-3 {
+          padding: 0 !important;
         }
         &:hover {
           color: $green;
@@ -65,12 +110,19 @@
             position: absolute;
             left: 30px;
             bottom: 11px;
+            @media screen and (max-width: 768px){
+              top: 7px;
+              left: 15px;
+            }
           }
         }
       }
     }
     .btn {
       font-weight: bold;
+      @media screen and (max-width: 568px) {
+        min-width: 100%;
+      }
     }
     #button-back {
       background-color: transparent !important;
@@ -87,6 +139,10 @@
 }
 
 #finalScreen {
+  @media screen and (max-width: 768px) {
+    padding-left: .5rem !important;
+    padding-right: .5rem !important;
+  }
   #result-card {
     background-color: #fff;
     padding: 5px;
@@ -104,6 +160,14 @@
       width: 60%;
       text-align: right;
       border-radius: 5px 0 0 5px;
+      h4 {
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        padding: 10px !important;
+      }
     }
     #result-subheader {
       font-size: 16px;
@@ -115,11 +179,18 @@
       background-color: $green;
       width: 50%;
       border-radius: 5px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   }
   form {
     .form-group {
       width: 40%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
       input {
         border-radius: 0;
       }
