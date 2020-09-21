@@ -23,27 +23,6 @@ $(document).ready(function() {
         listenToEnableSend()
     })
 
-    $('#phone').keyup(function () {
-        if ($(this).val() != ''){
-            if ($(this).val().length < 18) {
-                $(this).addClass('is-invalid')
-                $('#phoneHelp').addClass('invalid-feedback')
-                $('#phoneHelp').text('Номер телефона должен содержать 10 цифр')
-            } else if ($(this).val().length >= 18) {
-                $(this).addClass('is-valid')
-                $(this).removeClass('is-invalid')
-                $('#phoneHelp').addClass('valid-feedback')
-                $('#phoneHelp').removeClass('invalid-feedback')
-                $('#phoneHelp').text('Номер телефона указан верно')
-            }
-        } else {
-            $(this).addClass('is-invalid')
-            $('#phoneHelp').addClass('invalid-feedback')
-            $('#phoneHelp').text('Поле телефон не должно быть пустым')
-        }
-        listenToEnableSend()
-    })
-
     $('#email').keyup(function(){
         if ($(this).val() != ''){
             if ($(this).val().search(patternEmail) == 0){
@@ -81,7 +60,7 @@ $(document).ready(function() {
     })
 
     function listenToEnableSend() {
-        if ($('#name').hasClass('is-valid') && $('#phone').hasClass('is-valid') && $('#email').hasClass('is-valid') && $('#link').hasClass('is-valid')) {
+        if ($('#name').hasClass('is-valid') && $('#email').hasClass('is-valid') && $('#link').hasClass('is-valid')) {
             $('#submit').removeAttr('disabled')
         }
     }

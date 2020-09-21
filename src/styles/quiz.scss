@@ -87,9 +87,46 @@
 }
 
 #finalScreen {
+  #result-card {
+    background-color: #fff;
+    padding: 5px;
+    #result-image {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    #result-header {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      background-color: $green;
+      width: 60%;
+      text-align: right;
+      border-radius: 5px 0 0 5px;
+    }
+    #result-subheader {
+      font-size: 16px;
+    }
+    #result-description {
+      font-size: 14px;
+    }
+    #result-share {
+      background-color: $green;
+      width: 50%;
+      border-radius: 5px;
+    }
+  }
   form {
+    .form-group {
+      width: 40%;
+      input {
+        border-radius: 0;
+      }
+    }
     small {
       height: 10px;
+      text-align: right;
     }
   }
 }

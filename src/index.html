@@ -27,10 +27,10 @@
                                 <a href="#" class="nav-link">Предзаказ</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="#" class="nav-link">OPPO Reno4 Pro</a>
+                                <a href="#" class="nav-link">OPPO Reno4 series</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="#" class="nav-link">OPPO Reno4 Lite</a>
+                                <a href="#" class="nav-link">Где купить</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
                                 <a href="#" class="nav-link">Интернет-магазин</a>
@@ -51,10 +51,10 @@
                 <a href="#" class="nav-link">Предзаказ</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="#" class="nav-link">OPPO Reno4 Pro</a>
+                <a href="#" class="nav-link">OPPO Reno4 series</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="#" class="nav-link">OPPO Reno4 Lite</a>
+                <a href="#" class="nav-link">Где купить</a>
             </li>
             <li class="nav-item ml-4">
                 <a href="#" class="nav-link">Интернет-магазин</a>
@@ -131,7 +131,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <div class="container">
-                        <div id="welcomeScreen" class="text-center h-100">
+                        <div id="welcomeScreen" class="text-center h-100" style="display: block">
                             <p class="lead font-weight-bold">
                                 7 дней недели и 7 танцевальных элементов, <br> что они о тебе расскажут?
                             </p>
@@ -177,7 +177,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -216,7 +216,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -255,7 +255,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -294,7 +294,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -333,7 +333,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -372,7 +372,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -411,7 +411,7 @@
                                             <button id="button-back" class="btn w-100">Назад</button>
                                         </div>
                                         <div class="col-md-3">
-                                            <button id="button-forward" class="btn w-100">Дальше</button>
+                                            <button id="button-forward" disabled="true" class="btn-success btn w-100">Дальше</button>
                                         </div>
                                         <div class="col-md-3"></div>
                                     </div>
@@ -420,166 +420,185 @@
                         </div>
                         <div id="finalScreen" class="px-5 align-items-center justify-content-center"
                              style="display: none;">
-                            <div class="">
-                                <img src="img/bg-modal.png" alt="">
-                                <h2 class="">
-                                    Больше вариантов <span id="answerSpan">A</span>
-                                </h2>
-                                <p>Смотри презентацию новой серии смартфонов OPPO Reno4! Участвуй в конкурсе и получи шанс выиграть OPPO Reno4 Light!</p>
-                                <div id="shareButtonsA">
-                                    <!-- VK SHARE -->
-                                    <script type="text/javascript">
-                                        document.write(VK.Share.button({
-                                                url: 'http://oppo.bublik.site/redir-a.html',
-                                                title: 'Результат А',
-                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                            },
-                                            {
-                                                type: "custom", text: "Вконтакте"
-                                            }));
-                                    </script>
-                                    <!-- FACEBOOK SHARE -->
-                                    <div id="ShareFbA">Facebook</div>
-                                    <script>
-                                        document.getElementById('ShareFbA').onclick = function() {
-                                            FB.ui({
-                                                method: 'feed',
-                                                link: 'https://oppo.bublik.site/redir-a.html'
-                                            }, function(response){});
-                                        }
+                            <div class="container">
+                                <div class="row" id="result-card">
+                                    <div id="result-image" class="col-md-5 px-0">
+                                        <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="result-header" class="px-3 py-4">
+                                            <h4 class="text-white m-0 font-weight-bold pr-3"><span id="answerSpan">A</span> Ты — контемпорари</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 px-4 d-flex align-items-center">
+                                        <div>
+                                            <h5 id="result-subheader" class="py-3 font-weight-bold">
+                                                Каждый день ты творишь – новую версию себя и окружающего мира, тонко
+                                                чувствуешь ритм жизни и умеешь донести до окружающих свое мнение легко и
+                                                убедительно.
+                                            </h5>
+                                            <p id="result-description">
+                                                Такой личности нужен мощный смартфон с серьезными возможностями.
+                                                Смартфон Reno4 Pro 5G оборудован мощным процессором Qualcomm® Snapdragon™
+                                                765G, который поддерживает сети 5G SA и 5G NSA, а также может эффективно
+                                                работать с самыми распространенными частотными диапазонами. Реализованная
+                                                в этом процессоре жидкостная система охлаждения, а также большой объем
+                                                оперативной (12 ГБ) и встроенной памяти (256 ГБ) на смартфоне позволяют в
+                                                полной мере использовать возможности технологии 5G
+                                            </p>
+                                            <div id="result-share"  class="d-flex px-4 py-3 text-white">
+                                                <div class="m-0 pr-4 font-weight-bold" style="transform: translateY(2px);">Поделиться</div>
+                                                <div id="shareButtonsA" class="d-flex">
+                                                    <!-- VK SHARE -->
+                                                    <script type="text/javascript">
+                                                        document.write(VK.Share.button({
+                                                                url: 'http://oppo.bublik.site/redir-a.html',
+                                                                title: 'Результат А',
+                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                                            },
+                                                            {
+                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
+                                                            }));
+                                                    </script>
+                                                    <!-- FACEBOOK SHARE -->
+                                                    <div id="ShareFbA" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt=""></a></div>
+                                                    <script>
+                                                        document.getElementById('ShareFbA').onclick = function() {
+                                                            FB.ui({
+                                                                method: 'feed',
+                                                                link: 'https://oppo.bublik.site/redir-a.html'
+                                                            }, function(response){});
+                                                        }
 
-                                    </script>
-                                    <script>
-                                        window.fbAsyncInit = function() {
-                                            FB.init({
-                                                appId            : '957863797958595',
-                                                autoLogAppEvents : true,
-                                                xfbml            : true,
-                                                version          : 'v8.0'
-                                            });
-                                        };
-                                    </script>
-                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                                </div>
-                                <div id="shareButtonsB">
-                                    <!-- VK SHARE -->
-                                    <script type="text/javascript">
-                                        document.write(VK.Share.button({
-                                                url: 'http://oppo.bublik.site/redir-b.html',
-                                                title: 'Результат B',
-                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                            },
-                                            {
-                                                type: "custom", text: "Вконтакте"
-                                            }));
-                                    </script>
-                                    <!-- FACEBOOK SHARE -->
-                                    <div id="ShareFbB">Facebook</div>
-                                    <script>
-                                        document.getElementById('ShareFbB').onclick = function() {
-                                            FB.ui({
-                                                method: 'feed',
-                                                link: 'https://oppo.bublik.site/redir-b.html'
-                                            }, function(response){});
-                                        }
+                                                    </script>
+                                                    <script>
+                                                        window.fbAsyncInit = function() {
+                                                            FB.init({
+                                                                appId            : '957863797958595',
+                                                                autoLogAppEvents : true,
+                                                                xfbml            : true,
+                                                                version          : 'v8.0'
+                                                            });
+                                                        };
+                                                    </script>
+                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                                </div>
+                                                <div id="shareButtonsB" class="d-flex">
+                                                    <script type="text/javascript">
+                                                        document.write(VK.Share.button({
+                                                                url: 'http://oppo.bublik.site/redir-b.html',
+                                                                title: 'Результат B',
+                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                                            },
+                                                            {
+                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
+                                                            }));
+                                                    </script>
 
-                                    </script>
-                                    <script>
-                                        window.fbAsyncInit = function() {
-                                            FB.init({
-                                                appId            : '957863797958595',
-                                                autoLogAppEvents : true,
-                                                xfbml            : true,
-                                                version          : 'v8.0'
-                                            });
-                                        };
-                                    </script>
-                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                                </div>
-                                <div id="shareButtonsC">
-                                    <!-- VK SHARE -->
-                                    <script type="text/javascript">
-                                        document.write(VK.Share.button({
-                                                url: 'http://oppo.bublik.site/redir-c.html',
-                                                title: 'Результат B',
-                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                            },
-                                            {
-                                                type: "custom", text: "Вконтакте"
-                                            }));
-                                    </script>
-                                    <!-- FACEBOOK SHARE -->
-                                    <div id="ShareFbC">Facebook</div>
-                                    <script>
-                                        document.getElementById('ShareFbC').onclick = function() {
-                                            FB.ui({
-                                                method: 'feed',
-                                                link: 'https://oppo.bublik.site/redir-c.html'
-                                            }, function(response){});
-                                        }
+                                                    <div id="ShareFbB" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt=""></a></div>
+                                                    <script>
+                                                        document.getElementById('ShareFbB').onclick = function() {
+                                                            FB.ui({
+                                                                method: 'feed',
+                                                                link: 'https://oppo.bublik.site/redir-b.html'
+                                                            }, function(response){});
+                                                        }
 
-                                    </script>
-                                    <script>
-                                        window.fbAsyncInit = function() {
-                                            FB.init({
-                                                appId            : '957863797958595',
-                                                autoLogAppEvents : true,
-                                                xfbml            : true,
-                                                version          : 'v8.0'
-                                            });
-                                        };
-                                    </script>
-                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                                </div>
-                                <div id="shareButtonsD">
-                                    <!-- VK SHARE -->
-                                    <script type="text/javascript">
-                                        document.write(VK.Share.button({
-                                                url: 'http://oppo.bublik.site/redir-d.html',
-                                                title: 'Результат B',
-                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                            },
-                                            {
-                                                type: "custom", text: "Вконтакте"
-                                            }));
-                                    </script>
-                                    <!-- FACEBOOK SHARE -->
-                                    <div id="ShareFbD">Facebook</div>
-                                    <script>
-                                        document.getElementById('ShareFbD').onclick = function() {
-                                            FB.ui({
-                                                method: 'feed',
-                                                link: 'https://oppo.bublik.site/redir-d.html'
-                                            }, function(response){});
-                                        }
+                                                    </script>
+                                                    <script>
+                                                        window.fbAsyncInit = function() {
+                                                            FB.init({
+                                                                appId            : '957863797958595',
+                                                                autoLogAppEvents : true,
+                                                                xfbml            : true,
+                                                                version          : 'v8.0'
+                                                            });
+                                                        };
+                                                    </script>
+                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                                </div>
+                                                <div id="shareButtonsC" class="d-flex">
+                                                    <script type="text/javascript">
+                                                        document.write(VK.Share.button({
+                                                                url: 'http://oppo.bublik.site/redir-c.html',
+                                                                title: 'Результат B',
+                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                                            },
+                                                            {
+                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
+                                                            }));
+                                                    </script>
 
-                                    </script>
-                                    <script>
-                                        window.fbAsyncInit = function() {
-                                            FB.init({
-                                                appId            : '957863797958595',
-                                                autoLogAppEvents : true,
-                                                xfbml            : true,
-                                                version          : 'v8.0'
-                                            });
-                                        };
-                                    </script>
-                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                                    <div id="ShareFbC" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt=""></a></div>
+                                                    <script>
+                                                        document.getElementById('ShareFbC').onclick = function() {
+                                                            FB.ui({
+                                                                method: 'feed',
+                                                                link: 'https://oppo.bublik.site/redir-c.html'
+                                                            }, function(response){});
+                                                        }
+
+                                                    </script>
+                                                    <script>
+                                                        window.fbAsyncInit = function() {
+                                                            FB.init({
+                                                                appId            : '957863797958595',
+                                                                autoLogAppEvents : true,
+                                                                xfbml            : true,
+                                                                version          : 'v8.0'
+                                                            });
+                                                        };
+                                                    </script>
+                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                                </div>
+                                                <div id="shareButtonsD" class="d-flex">
+                                                    <script type="text/javascript">
+                                                        document.write(VK.Share.button({
+                                                                url: 'http://oppo.bublik.site/redir-d.html',
+                                                                title: 'Результат B',
+                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
+                                                            },
+                                                            {
+                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
+                                                            }));
+                                                    </script>
+
+                                                    <div id="ShareFbD" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt=""></a></div>
+                                                    <script>
+                                                        document.getElementById('ShareFbD').onclick = function() {
+                                                            FB.ui({
+                                                                method: 'feed',
+                                                                link: 'https://oppo.bublik.site/redir-d.html'
+                                                            }, function(response){});
+                                                        }
+
+                                                    </script>
+                                                    <script>
+                                                        window.fbAsyncInit = function() {
+                                                            FB.init({
+                                                                appId            : '957863797958595',
+                                                                autoLogAppEvents : true,
+                                                                xfbml            : true,
+                                                                version          : 'v8.0'
+                                                            });
+                                                        };
+                                                    </script>
+                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="mt-3 text-center">
                                 <form id="feedbackForm" method="get" action="">
-                                    <div class="form-group">
+                                    <div class="form-group mx-auto">
                                         <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
                                         <small id="nameHelp" class="form-text "></small>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="phone" class="form-control" id="phone" name="phone" aria-describedby="phone" placeholder="Telephone" required>
-                                        <small id="phoneHelp" class="form-text "></small>
-                                    </div>
-                                    <div class="form-group">
+                                    <div class="form-group mx-auto">
                                         <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email" required>
                                         <small id="emailHelp" class="form-text "></small>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group mx-auto">
                                         <input type="text" class="form-control" id="link" name="link" placeholder="Ссылка на пост" required>
                                         <small id="linkHelp" class="form-text "></small>
                                     </div>

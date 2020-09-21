@@ -56,27 +56,27 @@ $('document').ready(function($) {
             if (result[i] == 'B') {B++}
             if (result[i] == 'C') {C++}
             if (result[i] == 'D') {D++}
-            if (A == Math.max(A, B, C, D)) {
-                $('#answerSpan').text('#1 (A)');
-                $('#shareButtonsB').remove();
-                $('#shareButtonsC').remove();
-                $('#shareButtonsD').remove();
-            } else if (B == Math.max(A, B, C, D)) {
-                $('#answerSpan').text('#2 (B)');
-                $('#shareButtonsA').remove();
-                $('#shareButtonsC').remove();
-                $('#shareButtonsD').remove();
-            } else if (C == Math.max(A, B, C, D)) {
-                $('#answerSpan').text('#3 (C)');
-                $('#shareButtonsA').remove();
-                $('#shareButtonsB').remove();
-                $('#shareButtonsD').remove();
-            } else if (D == Math.max(A, B, C, D)) {
-                $('#answerSpan').text('#4 (D)');
-                $('#shareButtonsA').remove();
-                $('#shareButtonsB').remove();
-                $('#shareButtonsC').remove();
-            }
+        }
+        if (A == Math.max(A, B, C, D)) {
+            $('#answerSpan').text('#1 (A)')
+            $('#shareButtonsB').remove()
+            $('#shareButtonsC').remove()
+            $('#shareButtonsD').remove()
+        } else if (B == Math.max(A, B, C, D)) {
+            $('#answerSpan').text('#2 (B)')
+            $('#shareButtonsA').remove()
+            $('#shareButtonsC').remove()
+            $('#shareButtonsD').remove()
+        } else if (C == Math.max(A, B, C, D)) {
+            $('#answerSpan').text('#3 (C)')
+            $('#shareButtonsA').remove()
+            $('#shareButtonsB').remove()
+            $('#shareButtonsD').remove()
+        } else if (D == Math.max(A, B, C, D)) {
+            $('#answerSpan').text('#4 (D)')
+            $('#shareButtonsA').remove()
+            $('#shareButtonsB').remove()
+            $('#shareButtonsC').remove()
         }
         $('#question' + countOfQuestions).css('display', 'none')
         $('#finalScreen').addClass('animate__animated animate__fadeInRight')
@@ -111,17 +111,21 @@ $('document').ready(function($) {
         $('#case' + i + 'a1').click(function () {
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected')
+                $('#question' + i + ' #button-forward').attr('disabled', 'disabled')
             } else {
                 $('#case' + i + 'a2').removeClass('selected')
                 $(this).addClass('selected')
+                $('#question' + i + ' #button-forward').removeAttr('disabled')
             }
         })
         $('#case' + i + 'a2').click(function () {
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected')
+                $('#question' + i + ' #button-forward').attr('disabled', 'disabled')
             } else {
                 $('#case' + i + 'a1').removeClass('selected')
                 $(this).addClass('selected')
+                $('#question' + i + ' #button-forward').removeAttr('disabled')
             }
         })
     }
