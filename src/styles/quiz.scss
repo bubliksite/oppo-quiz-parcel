@@ -11,15 +11,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      background-image: url("../../src/img/bg-quiz-mobile.png");
+    }
     button.close {
       position: absolute;
       top: 20px;
       right: 20px;
     }
     .container {
-      @media screen and (max-width: 768px) {
-        padding: 0;
-      }
     }
   }
 }
@@ -97,7 +98,9 @@
           }
         }
         .py-3 {
-          padding: 0 !important;
+          @media screen and (max-width: 568px) {
+            padding: 0 !important;
+          }
         }
         &:hover {
           color: $green;
