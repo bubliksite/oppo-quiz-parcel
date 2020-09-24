@@ -1,0 +1,66 @@
+#product {
+  background:
+          url("../../src/img/green-cloud-bg.png") no-repeat top left,
+          url("../../src/img/pink-cloud-bg.png") no-repeat top right;
+  .perfomance {
+    position: relative;
+    .link-to-video {
+      img {
+        width: 85%;
+      }
+    }
+    .phone {
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      @media screen and (max-width: 420px) {
+        bottom: unset;
+        top: 30%;
+      }
+      img {
+        width: 10vw;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .icons-list {
+    padding-left: 0;
+    font-size: 14px;
+    li {
+      padding-bottom: .8rem;
+      @media screen and (max-width: 420px) {
+        width: 65%;
+      }
+      img  {
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .desktop-display {
+    display: block;
+    width: 50%;
+    @media screen and (max-width: 420px) {
+      display: none;
+    }
+  }
+
+  .gift-product {
+    img  {
+      max-width: 100%;
+    }
+    .mobile-display {
+      display: none;
+      margin-bottom: 0;
+      @media screen and (max-width: 420px) {
+        display: block;
+        margin-bottom: 1rem;
+        width: 50%;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      text-align: center;
+    }
+  }
+}
