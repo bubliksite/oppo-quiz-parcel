@@ -476,9 +476,11 @@ body{
             text-align: center;
           }
           img {
+            width: 5.3rem;
+            object-fit: contain;
+            padding-left: .5rem;
             @media screen and (max-width: 992px) {
               width: 4.5rem;
-              object-fit: contain;
             }
             @media screen and (max-width: 568px) {
               padding-top: 1rem;
