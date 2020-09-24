@@ -498,6 +498,33 @@ body{
     }
   }
 
+  #streamModal {
+    .modal-dialog{
+      min-width: 80vw;
+      .modal-content {
+        min-width: 80vw;
+        border-radius: 0;
+        border: 1px solid transparent;
+        .video {
+          position:relative;
+          padding-bottom:56.25%;
+          //padding-top:25px;height:0;
+          iframe {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+          }
+        }
+        h3 {
+          color: $green;
+        }
+      }
+    }
+
+  }
+
   .btn {
     background-color: $green !important;
     color: #fff !important;
