@@ -10,7 +10,7 @@
     <title>Участвуй в конкурсе и получи шанс выиграть OPPO Reno4 Light!</title>
 
     <!-- VK SHARE -->
-    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+    <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
 
 
 </head>
@@ -423,7 +423,13 @@
                             <div class="container">
                                 <div class="row" id="result-card">
                                     <div id="result-image" class="col-lg-5 px-0">
-                                        <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="fb-root"></div>
+                                        <script async defer
+                                                crossorigin="anonymous"
+                                                src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=920311265155027&autoLogAppEvents=1"
+                                                nonce="P2FH2LZg">
+                                        </script>
+                                        <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="" id="result">
                                         <div id="result-header" class="px-3 py-4">
                                             <h4 class="text-white m-0 font-weight-bold pr-3"><span id="answerSpan">A</span> Ты — контемпорари</h4>
                                         </div>
@@ -446,143 +452,135 @@
                                             </p>
                                             <div id="result-share"  class="d-flex px-4 py-3 text-white">
                                                 <div class="m-0 pr-4 font-weight-bold" style="transform: translateY(2px);">Поделиться</div>
-                                                <div id="shareButtonsA" class="d-flex">
-                                                    <!-- VK SHARE -->
-                                                    <script type="text/javascript">
-                                                        document.write(VK.Share.button({
-                                                                url: 'http://oppo.bublik.site/redir-a.html',
-                                                                title: 'Результат А',
-                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                                            },
-                                                            {
-                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
-                                                            }));
-                                                    </script>
-                                                    <!-- FACEBOOK SHARE -->
-                                                    <div id="ShareFbA" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt="Facebook"></a></div>
-                                                    <script>
-                                                        document.getElementById('ShareFbA').onclick = function() {
-                                                            FB.ui({
-                                                                method: 'feed',
-                                                                link: 'https://oppo.bublik.site/redir-a.html'
-                                                            }, function(response){});
-                                                        }
-
-                                                    </script>
-                                                    <script>
-                                                        window.fbAsyncInit = function() {
-                                                            FB.init({
-                                                                appId            : '957863797958595',
-                                                                autoLogAppEvents : true,
-                                                                xfbml            : true,
-                                                                version          : 'v8.0'
-                                                            });
-                                                        };
-                                                    </script>
-                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                                                <div class="fb-share-button fb_login_btn"
+                                                     data-href="https://mways.ru/wp-content/uploads/2020/01/Frame_04.png"
+                                                     data-layout="button_count"
+                                                     data-size="large">
+                                                    <a target="_blank"
+                                                       href="https://www.facebook.com/sharer/sharer.php?u=https://mways.ru/wp-content/uploads/2020/01/Frame_04.png;src=sdkpreparse"
+                                                       class="fb-xfbml-parse-ignore"
+                                                       onclick="fb_login();return false;">
+                                                        Поделиться
+                                                    </a>
                                                 </div>
-                                                <div id="shareButtonsB" class="d-flex">
-                                                    <script type="text/javascript">
-                                                        document.write(VK.Share.button({
-                                                                url: 'http://oppo.bublik.site/redir-b.html',
-                                                                title: 'Результат B',
-                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                                            },
-                                                            {
-                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
-                                                            }));
-                                                    </script>
+                                                <script>
+                                                    function handle_fb_data(response){
+                                                        FB.api('/me', function(response) {
+                                                            console.log('Пользователь: ' + response.name);
+                                                            console.log('Данные из ФБ: '+JSON.stringify(response));
+                                                            //alert('Прилитело из ФБ: '+JSON.stringify(response));
 
-                                                    <div id="ShareFbB" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt="Facebook"></a></div>
-                                                    <script>
-                                                        document.getElementById('ShareFbB').onclick = function() {
-                                                            FB.ui({
-                                                                method: 'feed',
-                                                                link: 'https://oppo.bublik.site/redir-b.html'
-                                                            }, function(response){});
+                                                            var sendUrl = '/res';
+                                                            // отправляем данные пользователя
+                                                            fetch(sendUrl, {
+                                                                method: "POST",
+                                                                headers: {'Content-Type': 'application/json;charset=utf-8'},
+                                                                body:  JSON.stringify(response)
+                                                            })
+
+                                                        });
+                                                    }
+
+                                                    function fb_login(){
+                                                        FB.getLoginStatus(function(response) {
+                                                            if (response.authResponse) {
+                                                                console.log('Пользователь уже залогинен. Забираем его данные.');
+                                                                handle_fb_data(response);
+                                                            } else {
+                                                                console.log('Пользователь был не залогинен в ФБ, запускаем окно вохода в ФБ');
+                                                                FB.login(function(response){
+                                                                    if (response.authResponse) {
+                                                                        console.log('Пользователь вошел. Забираем его данные.');
+                                                                        handle_fb_data(response);
+                                                                    } else {
+                                                                        console.log('Пользователь передумал');
+                                                                    }
+                                                                });
+                                                            }
+                                                        }, {
+                                                            scope: 'email,id'
+                                                        });
+                                                    }
+
+                                                    window.fbAsyncInit = function() {
+                                                        FB.init({
+                                                            appId      : 1045683782552173,
+                                                            cookie     : true,  // enable cookies to allow the server to access
+                                                            // the session
+                                                            xfbml      : true,  // parse social plugins on this page
+                                                            version    : 'v2.8' // use graph api version 2.8
+                                                        });
+                                                    };
+                                                    // Load the SDK asynchronously
+                                                    (function(d, s, id) {
+                                                        var js, fjs = d.getElementsByTagName(s)[0];
+                                                        if (d.getElementById(id)) return;
+                                                        js = d.createElement(s); js.id = id;
+                                                        js.src = "//connect.facebook.net/en_US/sdk.js";
+                                                        fjs.parentNode.insertBefore(js, fjs);
+                                                    }(document, 'script', 'facebook-jssdk'));
+                                                </script>
+
+                                                <a onclick="authNshare()" style="cursor: pointer;"> Поделиться в VK </a>
+
+                                                <div style="width: 100%; height: 80px">&nbsp;</div>
+
+                                                <script>
+                                                    function load(){
+                                                        var vr;
+                                                        VK.Auth.login(authInfo, vk.appPermissions);
+                                                        function authInfo(response){
+                                                            if(response.session){ // Авторизация успешна
+                                                                vk.data.user = response.session.user;
+                                                                getUserData();
+                                                            }else alert("Авторизоваться не удалось!");
                                                         }
+                                                    }
 
-                                                    </script>
-                                                    <script>
-                                                        window.fbAsyncInit = function() {
-                                                            FB.init({
-                                                                appId            : '957863797958595',
-                                                                autoLogAppEvents : true,
-                                                                xfbml            : true,
-                                                                version          : 'v8.0'
-                                                            });
+                                                    function authNshare(){
+                                                        load();
+                                                        getUserData: function(){
+                                                            VK.Api.call('users.get', {fields: ['first_name', 'last_name', 'nickname', 'sex', 'bdate', 'city', 'country', 'home_town', ], order: 'name'},
+                                                                function(r){
+                                                                    if(r.response){
+                                                                        r = r.response;
+                                                                        var ol = $('#clientApi').add('ol');
+                                                                        for(var i = 0; i < r.length; ++i){
+                                                                            var li = ol.add('li').html(r[i].first_name+' '+r[i].last_name+' ('+r[i].uid+')')
+                                                                        }
+                                                                    }else alert("Не удалось получить список ваших друзей");
+                                                                })
                                                         };
-                                                    </script>
-                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                                                </div>
-                                                <div id="shareButtonsC" class="d-flex">
-                                                    <script type="text/javascript">
-                                                        document.write(VK.Share.button({
-                                                                url: 'http://oppo.bublik.site/redir-c.html',
-                                                                title: 'Результат B',
-                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                                            },
-                                                            {
-                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
-                                                            }));
-                                                    </script>
+                                                        pimg();
+                                                    }
+                                                    var sendUrl = '{ ссылка куда складывать JSON }';
+                                                    // отправляем данные пользователя
+                                                    fetch(sendUrl, {
+                                                        method: "POST",
+                                                        headers: {'Content-Type': 'application/json;charset=utf-8'},
+                                                        body:  JSON.stringify(response)
+                                                    });
 
-                                                    <div id="ShareFbC" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt="Facebook"></a></div>
-                                                    <script>
-                                                        document.getElementById('ShareFbC').onclick = function() {
-                                                            FB.ui({
-                                                                method: 'feed',
-                                                                link: 'https://oppo.bublik.site/redir-c.html'
-                                                            }, function(response){});
-                                                        }
 
-                                                    </script>
-                                                    <script>
-                                                        window.fbAsyncInit = function() {
-                                                            FB.init({
-                                                                appId            : '957863797958595',
-                                                                autoLogAppEvents : true,
-                                                                xfbml            : true,
-                                                                version          : 'v8.0'
-                                                            });
-                                                        };
-                                                    </script>
-                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                                                </div>
-                                                <div id="shareButtonsD" class="d-flex">
-                                                    <script type="text/javascript">
-                                                        document.write(VK.Share.button({
-                                                                url: 'http://oppo.bublik.site/redir-d.html',
-                                                                title: 'Результат B',
-                                                                image: 'https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg'
-                                                            },
-                                                            {
-                                                                type: "custom", text: "<img src=\"icon-vk.svg\" />"
-                                                            }));
-                                                    </script>
+                                                    function(pimg) {
+                                                        url  = 'http://vkontakte.ru/share.php?';
+                                                        url += '&image='       + encodeURIComponent(pimg);
+                                                        url += '&noparse=true';
+                                                        Share.popup(url);
+                                                    },
+                                                    popup: function(url) {
+                                                        window.open(url,'','toolbar=0,status=0,width=626,height=436');
+                                                    }
+                                                </script>
 
-                                                    <div id="ShareFbD" class="pl-3"><a href="#0"><img src="img/icon-fb.svg" alt="Facebook"></a></div>
-                                                    <script>
-                                                        document.getElementById('ShareFbD').onclick = function() {
-                                                            FB.ui({
-                                                                method: 'feed',
-                                                                link: 'https://oppo.bublik.site/redir-d.html'
-                                                            }, function(response){});
-                                                        }
 
-                                                    </script>
-                                                    <script>
-                                                        window.fbAsyncInit = function() {
-                                                            FB.init({
-                                                                appId            : '957863797958595',
-                                                                autoLogAppEvents : true,
-                                                                xfbml            : true,
-                                                                version          : 'v8.0'
-                                                            });
-                                                        };
-                                                    </script>
-                                                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-                                                </div>
+                                                <!-- инициализируем наш сайт -->
+                                                <script type="text/javascript">
+                                                    VK.init({
+                                                        apiId: 7607017
+                                                    });
+                                                </script>
+
                                             </div>
                                         </div>
                                     </div>

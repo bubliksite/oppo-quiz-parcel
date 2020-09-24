@@ -59,24 +59,16 @@ $('document').ready(function($) {
         }
         if (A == Math.max(A, B, C, D)) {
             $('#answerSpan').text('#1 (A)')
-            $('#shareButtonsB').remove()
-            $('#shareButtonsC').remove()
-            $('#shareButtonsD').remove()
+            $('.fb-share-button').attr('data-href', 'https://developers.facebook.com/docs/plugins/')
         } else if (B == Math.max(A, B, C, D)) {
             $('#answerSpan').text('#2 (B)')
-            $('#shareButtonsA').remove()
-            $('#shareButtonsC').remove()
-            $('#shareButtonsD').remove()
+            $('.fb-share-button').attr('data-href', 'https://developers.facebook.com/docs/plugins/')
         } else if (C == Math.max(A, B, C, D)) {
             $('#answerSpan').text('#3 (C)')
-            $('#shareButtonsA').remove()
-            $('#shareButtonsB').remove()
-            $('#shareButtonsD').remove()
+            $('.fb-share-button').attr('data-href', 'https://developers.facebook.com/docs/plugins/')
         } else if (D == Math.max(A, B, C, D)) {
             $('#answerSpan').text('#4 (D)')
-            $('#shareButtonsA').remove()
-            $('#shareButtonsB').remove()
-            $('#shareButtonsC').remove()
+            $('.fb-share-button').attr('data-href', 'https://developers.facebook.com/docs/plugins/')
         }
         $('#question' + countOfQuestions).css('display', 'none')
         $('#finalScreen').addClass('animate__animated animate__fadeInRight')
@@ -130,3 +122,4 @@ $('document').ready(function($) {
         })
     }
 })
+
