@@ -6,6 +6,3 @@ import "animate.css"
 
 import  "./components/parallax"
 import "./components/menu"
-import "./components/quiz"
-import "./components/forms"
-import "./components/validation-forms"

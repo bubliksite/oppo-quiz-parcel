@@ -1,8 +1,5 @@
 @import "vars";
 @import "fonts";
-@import "quiz";
-@import "~rfs/scss";
-
 body{
   * {
     scroll-behavior: smooth;
@@ -188,7 +185,7 @@ body{
         top: -6rem !important;
       }
       @media screen and (max-width: 576px) and (orientation: portrait) {
-        top: 0rem !important;
+        top: 0 !important;
       }
       img:nth-child(1){
         width: 50vw;
@@ -239,7 +236,7 @@ body{
         top: -6rem !important;
       }
       @media screen and (max-width: 576px) and (orientation: portrait) {
-        top: 0rem !important;
+        top: 0 !important;
       }
       img:nth-child(1){
         width: 50vw;
