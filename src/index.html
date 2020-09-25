@@ -9,8 +9,56 @@
 
     <title>Участвуй в конкурсе и получи шанс выиграть OPPO Reno4 Light!</title>
 
-    <!-- VK SHARE -->
+    <!-- VK -->
     <script src="https://vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <script async defer
+            crossorigin="anonymous"
+            src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=1045683782552173&autoLogAppEvents=1"
+            nonce="P2FH2LZg">
+    </script>
+    <script>
+        function handle_fb_data(response){
+            console.log('забираем данные');
+            FB.api('/me', function(response) {
+                var sendUrl = 'https://oppo.bublik.site/res/facebook.php';
+                // отправляем данные пользователя
+                fetch(sendUrl, {
+                    method: "POST",
+                    credentials: 'include',
+                    headers: {'Content-Type': 'application/json;charset=utf-8'},
+                    body:  JSON.stringify(response)
+                })
+
+            });
+        };
+        function fb_share(){
+            console.log('делимся');
+            FB.ui({
+                    method: 'share',
+                    href: 'https://manzhos.cz/share_fb/images/test_img.jpg',
+                },
+                function(response){
+                    fb_login();
+                });
+        };
+        function fb_login(){
+            console.log('процесс сбора данных инициирован');
+            FB.getLoginStatus(function(response) {
+                if (response.staus === 'connected') {
+                    handle_fb_data(response);
+                } else {
+                    FB.login(function(response){
+                        if (response.authResponse) {
+                            handle_fb_data(response);
+                        } else {
+                        }
+                    });
+                }
+            }, {
+                scope: 'email,id'
+            });
+        };
+    </script>
 
 
 </head>
@@ -423,12 +471,6 @@
                             <div class="container">
                                 <div class="row" id="result-card">
                                     <div id="result-image" class="col-lg-5 px-0">
-                                        <div id="fb-root"></div>
-                                        <script async defer
-                                                crossorigin="anonymous"
-                                                src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=920311265155027&autoLogAppEvents=1"
-                                                nonce="P2FH2LZg">
-                                        </script>
                                         <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="" id="result">
                                         <div id="result-header" class="px-3 py-4">
                                             <h4 class="text-white m-0 font-weight-bold pr-3"><span id="answerSpan">A</span> Ты — контемпорари</h4>
@@ -451,77 +493,16 @@
                                                 полной мере использовать возможности технологии 5G
                                             </p>
                                             <a href="mailto:#" class="pb-3 font-weight-bold">Обратная связь</a>
-                                            <div id="result-share"  class="d-flex px-4 py-3 text-white">
-<!--                                                <div class="m-0 pr-4 font-weight-bold" style="transform: translateY(2px);">Поделиться</div>-->
-                                                <div class="fb-share-button fb_login_btn"
-                                                     data-href="https://mways.ru/wp-content/uploads/2020/01/Frame_04.png"
-                                                     data-layout="button_count"
-                                                     data-size="large">
-                                                    <a target="_blank"
-                                                       href="https://www.facebook.com/sharer/sharer.php?u=https://mways.ru/wp-content/uploads/2020/01/Frame_04.png;src=sdkpreparse"
-                                                       class="fb-xfbml-parse-ignore"
-                                                       onclick="fb_login();return false;">
-                                                        Поделиться
-                                                    </a>
-                                                </div>
-                                                <script>
-                                                    function handle_fb_data(response){
-                                                        FB.api('/me', function(response) {
-                                                            console.log('Пользователь: ' + response.name);
-                                                            console.log('Данные из ФБ: '+JSON.stringify(response));
-                                                            //alert('Прилитело из ФБ: '+JSON.stringify(response));
-
-                                                            var sendUrl = '/res/fb.json';
-                                                            // отправляем данные пользователя
-                                                            fetch(sendUrl, {
-                                                                method: "POST",
-                                                                headers: {'Content-Type': 'application/json;charset=utf-8'},
-                                                                body:  JSON.stringify(response)
-                                                            })
-
-                                                        });
-                                                    }
-
-                                                    function fb_login(){
-                                                        FB.getLoginStatus(function(response) {
-                                                            if (response.authResponse) {
-                                                                console.log('Пользователь уже залогинен. Забираем его данные.');
-                                                                handle_fb_data(response);
-                                                            } else {
-                                                                console.log('Пользователь был не залогинен в ФБ, запускаем окно вохода в ФБ');
-                                                                FB.login(function(response){
-                                                                    if (response.authResponse) {
-                                                                        console.log('Пользователь вошел. Забираем его данные.');
-                                                                        handle_fb_data(response);
-                                                                    } else {
-                                                                        console.log('Пользователь передумал');
-                                                                    }
-                                                                });
-                                                            }
-                                                        }, {
-                                                            scope: 'email,id'
-                                                        });
-                                                    }
-
-                                                    window.fbAsyncInit = function() {
-                                                        FB.init({
-                                                            appId      : 1045683782552173,
-                                                            cookie     : true,  // enable cookies to allow the server to access
-                                                            // the session
-                                                            xfbml      : true,  // parse social plugins on this page
-                                                            version    : 'v2.8' // use graph api version 2.8
-                                                        });
-                                                    };
-                                                    // Load the SDK asynchronously
-                                                    (function(d, s, id) {
-                                                        var js, fjs = d.getElementsByTagName(s)[0];
-                                                        if (d.getElementById(id)) return;
-                                                        js = d.createElement(s); js.id = id;
-                                                        js.src = "//connect.facebook.net/en_US/sdk.js";
-                                                        fjs.parentNode.insertBefore(js, fjs);
-                                                    }(document, 'script', 'facebook-jssdk'));
-                                                </script>
-
+                                            <div id="result-share"  class="d-flex px-4 py-3 text-white mt-4">
+                                                <div class="m-0 pr-4 font-weight-bold" style="transform: translateY(2px);">Поделиться</div>
+                                                <!-- FACEBOOK BUTTON -->
+                                                <div id="fb-root"></div>
+                                                <a class="" type="button" onclick="fb_share()">
+                                                    <img src="img/icon-fb.svg" alt="">
+                                                </a>
+                                                <a class="ml-4" type="button">
+                                                    <img src="img/icon-vk.svg" alt="">
+                                                </a>
                                                 <!--<a onclick="authNshare()" style="cursor: pointer;"> Поделиться в VK </a>
 
                                                 <div style="width: 100%; height: 80px">&nbsp;</div>
@@ -585,39 +566,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="mt-3 text-center">
-                                <form id="feedbackForm" method="get" action="">
-                                    <div class="form-group mx-auto">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Имя" required>
-                                        <small id="nameHelp" class="form-text "></small>
-                                    </div>
-                                    <div class="form-group mx-auto">
-                                        <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Email" required>
-                                        <small id="emailHelp" class="form-text "></small>
-                                    </div>
-                                    <div class="form-group mx-auto">
-                                        <input type="text" class="form-control" id="link" name="link" placeholder="Ссылка на пост" required>
-                                        <small id="linkHelp" class="form-text "></small>
-                                    </div>
-                                    <button type="submit" id="submit" disabled="true" class="btn">Отправить</button>
-                                </form>
-                            </div>-->
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="formSuccessSendModal" data-backdrop="true" data-keyboard="true" tabindex="-1"
-         aria-labelledby="formSuccessSendModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <p>Форма успешно отправлена</p>
-                    <button type="button" class="btn" data-dismiss="modal" aria-label="Close">
-                        Понятно!
-                    </button>
                 </div>
             </div>
         </div>
@@ -649,8 +599,26 @@
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
     <script src="components/handler-form.js"></script>
+    <!-- FB SHARE SCRIPT -->
     <script>
-
+        window.fbAsyncInit = function() {
+            console.log('инициировали FB.init');
+            FB.init({
+                appId      : 1045683782552173,
+                cookie     : true,  // enable cookies to allow the server to access
+                // the session
+                xfbml      : true,  // parse social plugins on this page
+                version    : 'v2.8' // use graph api version 2.8
+            });
+        };
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     </script>
     <div id="bg-modal" class=""></div>
     </body>
