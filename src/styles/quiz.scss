@@ -179,9 +179,9 @@
       font-size: 14px;
     }
     #result-share {
-      //background-color: $green;
-      width: 100%;
-      //border-radius: 5px;
+      background-color: $green;
+      width: 50%;
+      border-radius: 5px;
       @media screen and (max-width: 768px) {
         width: 100%;
         margin-bottom: 1rem;
