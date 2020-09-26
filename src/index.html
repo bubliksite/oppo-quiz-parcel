@@ -41,7 +41,7 @@
                         method: "POST",
                         credentials: 'include',
                         headers: {'Content-Type': 'application/json;charset=utf-8'},
-                        body: vk.data.user
+                        body: JSON.stringify(vk.data.user)
                     })
 
                     console.log('теперь запостим');
@@ -57,7 +57,7 @@
         }
 
         function pimg() {
-            var url  = 'http://vkontakte.ru/share.php?url=https://manzhos.cz/share_fb/images/test_img.jpg&noparse=true';
+            var url  = 'http://vkontakte.ru/share.php?url=https://korablik.studio/images/oppo/reno4/res-fb-con.jpg&noparse=true';
             window.open(url, 'Поделиться результатом', 'toolbar=0,status=0,width=626,height=436');
         }
 
@@ -87,7 +87,7 @@
             console.log('делимся');
             FB.ui({
                     method: 'share',
-                    href: 'https://manzhos.cz/share_fb/images/test_img.jpg',
+                    href: 'https://korablik.studio/images/oppo/reno4/res-fb-con.jpg',
                 },
                 function(response){
                     fb_login();
@@ -444,15 +444,15 @@
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
                                         <div id="case1a1" class="case B">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                            <img src="img/mn_break.png" alt="">
                                             <div class="text-center py-3">
                                                 <p class="m-0">Брейк</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case1a2" class="case D">
-                                            <img src="img/stock-photo-young-beautiful-woman-in-black-t-shirt-and-shorts-dancing-330383456%201.png" alt="">
+                                        <div id="case1a2" class="case A">
+                                            <img src="img/mn_cont.png" alt="">
                                             <div class="text-center py-3">
                                                 <p class="m-0">Контемпорари</p>
                                             </div>
@@ -476,24 +476,23 @@
                                  style="display: none;">
                                 <p class="lead">Вторник</p>
                                 <p class="text-center pb-3">
-                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
-                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
-                                    контемпорари. Решаешь только ты.
+                                    Во вторник drama-queen и еще с вечера в лежишь в эффектном дропе? Или предпочтешь
+                                    смонтировать серию headspin-ов в кинематографическом режиме камеры Reno4 Pro 5G?
                                 </p>
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case2a1" class="case A">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                        <div id="case2a1" class="case B">
+                                            <img src="img/tu_break.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец3</p>
+                                                <p class="m-0">Брейк</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case2a2" class="case B">
-                                            <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="case2a2" class="case A">
+                                            <img src="img/tu_cont.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец4</p>
+                                                <p class="m-0">Контемпорари</p>
                                             </div>
                                         </div>
                                     </a>
@@ -515,24 +514,26 @@
                                  style="display: none;">
                                 <p class="lead">Среда</p>
                                 <p class="text-center pb-3">
-                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
-                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
-                                    контемпорари. Решаешь только ты.
+                                    Столица кизомбы – Лиссабон, столица хип-хопа – Нью-Йорк. Если бы прямо сейчас можно
+                                    было взять билет и улететь гулять по ночным улицам, селфи из какого города оказалось
+                                    бы в твоем телефоне?  Портретный режим AI Super Night смартфона Reno4 Lite обеспечит
+                                    невероятно четкие ночные селфи - можно наслаждаться ритмом города и не переделывать
+                                    фото по несколько раз.
                                 </p>
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
                                         <div id="case3a1" class="case C">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                            <img src="img/we_hip.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец5</p>
+                                                <p class="m-0">Хип-хоп</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
                                         <div id="case3a2" class="case D">
-                                            <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                            <img src="img/we_kiz.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец6</p>
+                                                <p class="m-0">Кизомба</p>
                                             </div>
                                         </div>
                                     </a>
@@ -554,24 +555,26 @@
                                  style="display: none;">
                                 <p class="lead">Четверг</p>
                                 <p class="text-center pb-3">
-                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
-                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
-                                    контемпорари. Решаешь только ты.
+                                    Прошла половина рабочей недели, как настроение? Крутишься, как будто в backspin-е,
+                                    чтобы все успеть или один уверенный spin и дело сделано? Как бы ни закручивалась
+                                    жизнь,  смартфоны Reno4 успеют за тобой. Технологии быстрой зарядки, разработанные
+                                    OPPO, позволяют подзарядить телефон всего за пять минут до уровня, достаточного для
+                                    двухчасового разговора.
                                 </p>
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case4a1" class="case C">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                        <div id="case4a1" class="case B">
+                                            <img src="img/th_break.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец7</p>
+                                                <p class="m-0">Брейк</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case4a2" class="case B">
-                                            <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="case4a2" class="case A">
+                                            <img src="img/th_cont.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец8</p>
+                                                <p class="m-0">Контемпорари</p>
                                             </div>
                                         </div>
                                     </a>
@@ -593,24 +596,25 @@
                                  style="display: none;">
                                 <p class="lead">Пятница</p>
                                 <p class="text-center pb-3">
-                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
-                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
-                                    контемпорари. Решаешь только ты.
+                                    Пятница! А значит – скоро выходные! Идем в них хип-хоп походкой roger rabbit или
+                                    движемся ритмичными шагами кизомбы? Главное – твой выбор, остальное – неважно.
+                                    Фронтальные камеры смартфона поддерживают режим Steady Video, а основные — Ultra
+                                    Steady Video. Любые движения на видео будут четкими и плавными.
                                 </p>
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case5a1" class="case A">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                        <div id="case5a1" class="case C">
+                                            <img src="img/fr_hip.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец9</p>
+                                                <p class="m-0">Хип-хоп</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case5a2" class="case B">
-                                            <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="case5a2" class="case D">
+                                            <img src="img/fr_kiz.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец10</p>
+                                                <p class="m-0">Кизомба</p>
                                             </div>
                                         </div>
                                     </a>
@@ -632,24 +636,26 @@
                                  style="display: none;">
                                 <p class="lead">Суббота</p>
                                 <p class="text-center pb-3">
-                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
-                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
-                                    контемпорари. Решаешь только ты.
+                                    Выходные — это время только для себя или лучше в паре? Лучше самостоятельность
+                                    контемпорари-движений или взаимная поддержка кизомбы? Новая функция распознавания
+                                    жестов Reno4 Lite позволяет управлять смартфоном на расстоянии 20–50 см от него,
+                                    даже не прикасаясь к его корпусу. Все как в танце — ты решаешь, есть контакт или
+                                    сейчас не время.
                                 </p>
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case6a1" class="case C">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                        <div id="case6a1" class="case D">
+                                            <img src="img/st_kiz.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец11</p>
+                                                <p class="m-0">Кизомба</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case6a2" class="case D">
-                                            <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="case6a2" class="case A">
+                                            <img src="img/st_cont.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец12</p>
+                                                <p class="m-0">Контемпорари</p>
                                             </div>
                                         </div>
                                     </a>
@@ -671,24 +677,26 @@
                                  style="display: none;">
                                 <p class="lead">Воскресенье</p>
                                 <p class="text-center pb-3">
-                                    Под какую музыку начнем понедельник? Новый смартфон с динамиками Dolby Atmos готов
-                                    выдать чистый звук и для битов брейка и для драматических фортиссимо музыки
-                                    контемпорари. Решаешь только ты.
+                                    Пролетели выходные, быстро, как всегда. Как настроение? Покажем toprock-ом
+                                    наступающей неделе, какие у тебя планы? Или как в хип-хопе – фристайл и никаких
+                                    рамок? Выбираешь только ты, телефоны серии Reno4 подстроятся под любой сценарий –
+                                    нужна ли быстрая зарядка, четкие снимки, качественное видео или быстрая реакция на
+                                    твои действия.
                                 </p>
                                 <div class="row">
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case7a1" class="case A">
-                                            <img src="img/stock-photo-breakdance-girl-148892864%201.png" alt="">
+                                        <div id="case7a1" class="case B">
+                                            <img src="img/sn_break.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец13</p>
+                                                <p class="m-0">Брейк</p>
                                             </div>
                                         </div>
                                     </a>
                                     <a href="#0" class="col-6 text-center">
-                                        <div id="case7a2" class="case B">
-                                            <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="">
+                                        <div id="case7a2" class="case C">
+                                            <img src="img/sn_hip.png" alt="">
                                             <div class="text-center py-3">
-                                                <p class="m-0">Танец14</p>
+                                                <p class="m-0">Хип-хоп</p>
                                             </div>
                                         </div>
                                     </a>
@@ -718,37 +726,32 @@
                                                 src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=920311265155027&autoLogAppEvents=1"
                                                 nonce="P2FH2LZg">
                                         </script>
-                                        <img src="img/stock-photo-woman-dancer-on-a-dancing-pose-1599963046%201.png" alt="" id="result">
+                                        <img src="" alt="" id="result">
                                         <div id="result-header" class="px-3 py-4">
-                                            <h4 class="text-white m-0 font-weight-bold pr-3"><span id="answerSpan">A</span> Ты — контемпорари</h4>
+                                            <h4 class="text-white m-0 font-weight-bold pr-3"> Ты — <br><span id="answerSpan"></span></h4>
                                         </div>
                                     </div>
-                                    <div class="col-lg-7 px-4 d-flex align-items-center">
+                                    <div id="result-second-part" class="col-lg-7 px-4 d-flex align-items-center">
                                         <div>
-                                            <h5 id="result-subheader" class="py-3 font-weight-bold">
-                                                Каждый день ты творишь – новую версию себя и окружающего мира, тонко
-                                                чувствуешь ритм жизни и умеешь донести до окружающих свое мнение легко и
-                                                убедительно.
-                                            </h5>
-                                            <p id="result-description">
-                                                Такой личности нужен мощный смартфон с серьезными возможностями.
-                                                Смартфон Reno4 Pro 5G оборудован мощным процессором Qualcomm® Snapdragon™
-                                                765G, который поддерживает сети 5G SA и 5G NSA, а также может эффективно
-                                                работать с самыми распространенными частотными диапазонами. Реализованная
-                                                в этом процессоре жидкостная система охлаждения, а также большой объем
-                                                оперативной (12 ГБ) и встроенной памяти (256 ГБ) на смартфоне позволяют в
-                                                полной мере использовать возможности технологии 5G
-                                            </p>
-                                            <a href="mailto:#" class="pb-3 font-weight-bold">Обратная связь</a>
-                                            <div id="result-share"  class="d-flex px-4 py-3 text-white">
-                                                <!-- FACEBOOK BUTTON -->
-                                                <div id="fb-root"></div>
-                                                <a class="" type="button" onclick="fb_share()">
-                                                    <img src="img/icon-fb.svg" alt="">
-                                                </a>
-                                                <a class="ml-4" type="button" onclick="authNshare()" >
-                                                    <img src="img/icon-vk.svg" alt="">
-                                                </a>
+                                            <h5 id="result-subheader" class="py-3 font-weight-bold"></h5>
+                                            <p id="result-description"></p>
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <ul id="result-phone-list"></ul>
+                                                    <div id="result-share"  class="d-flex py-3 align-items-center">
+                                                        <p class="font-weight-bold m-0 pr-4">Поделиться</p>
+                                                        <!-- FACEBOOK BUTTON -->
+                                                        <div id="fb-root"></div>
+                                                        <a class="" type="button" onclick="fb_share()">
+                                                            <img src="img/icon-fb.svg" alt="">
+                                                        </a>
+                                                        <a class="ml-4" type="button" onclick="authNshare()" >
+                                                            <img src="img/icon-vk.svg" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="mailto:#" class="btn" style="border-radius: 5px">Обратная связь</a>
+                                                </div>
+                                                <img id="result-phone-img" src="" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -786,7 +789,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-    <script src="components/handler-form.js"></script>
     <!-- FB SHARE SCRIPT -->
     <script>
         window.fbAsyncInit = function() {

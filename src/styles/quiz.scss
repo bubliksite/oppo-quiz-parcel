@@ -172,20 +172,54 @@
         padding: 10px !important;
       }
     }
+    #result-second-part {
+      @media screen and (max-width: 420px) {
+        padding: 0 1rem !important;
+        display: block !important;
+        h5 {
+          font-size: 14px;
+          line-height: 16px;
+        }
+        p {
+          font-size: 12px;
+        }
+        ul {
+
+        }
+        li {
+          font-size: 12px;
+        }
+        #result-phone-img {
+          width: 40%;
+          height: 100%;
+          padding-right: 2rem;
+          padding-top: 1rem;
+          align-self: start;
+        }
+        #result-share {
+          img {
+            width: 25px;
+          }
+        }
+        .btn {
+          margin-top: 1rem;
+          font-size: 12px;
+        }
+      }
+    }
     #result-subheader {
       font-size: 16px;
     }
     #result-description {
       font-size: 14px;
     }
+    #result-phone-list {
+      color: $green;
+      font-size: 14px;
+      padding-left: 1rem;
+    }
     #result-share {
-      background-color: $green;
-      width: 50%;
-      border-radius: 5px;
-      @media screen and (max-width: 768px) {
-        width: 100%;
-        margin-bottom: 1rem;
-      }
+
     }
   }
   form {
