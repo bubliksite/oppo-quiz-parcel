@@ -57,7 +57,17 @@
         }
 
         function pimg() {
-            var url  = 'http://vkontakte.ru/share.php?url=https://korablik.studio/images/oppo/reno4/res-fb-con.jpg&noparse=true';
+            var textResult = document.getElementById('answerSpan').innerText
+            if (textResult == 'контемпорари') {
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/A.html&noparse=true'
+            } else if (textResult == 'брейк-данс') {
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/B.html&noparse=true'
+            } else if (textResult == 'хип-хоп') {
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/C.html&noparse=true'
+            } else if (textResult == 'кизомба') {
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/D.html&noparse=true'
+            }
+
             window.open(url, 'Поделиться результатом', 'toolbar=0,status=0,width=626,height=436');
         }
 
@@ -85,13 +95,41 @@
         };
         function fb_share(){
             console.log('делимся');
-            FB.ui({
-                    method: 'share',
-                    href: 'https://korablik.studio/images/oppo/reno4/res-fb-con.jpg',
-                },
-                function(response){
-                    fb_login();
-                });
+            var textResult = document.getElementById('answerSpan').innerText
+            console.log(textResult);
+            if (textResult == 'контемпорари') {
+                FB.ui({
+                        method: 'share',
+                        href: 'https://reno4.bublik.site/res/A.html',
+                    },
+                    function(response){
+                        fb_login();
+                    })
+            } else if (textResult == 'брейк-данс') {
+                FB.ui({
+                        method: 'share',
+                        href: 'https://reno4.bublik.site/res/B.html',
+                    },
+                    function(response){
+                        fb_login();
+                    })
+            } else if (textResult == 'хип-хоп') {
+                FB.ui({
+                        method: 'share',
+                        href: 'https://reno4.bublik.site/res/C.html',
+                    },
+                    function(response){
+                        fb_login();
+                    })
+            } else if (textResult == 'кизомба') {
+                FB.ui({
+                        method: 'share',
+                        href: 'https://reno4.bublik.site/res/D.html',
+                    },
+                    function(response){
+                        fb_login();
+                    })
+            }
         };
         function fb_login(){
             console.log('процесс сбора данных инициирован');
