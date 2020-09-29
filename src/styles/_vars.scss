@@ -10,8 +10,8 @@ $green: #046a38;
   font-weight: normal;
 }
 
-@mixin font-caveat-normal {
-  font-family: 'Caveat', "Lucida Handwriting", serif;
+@mixin font-segoe-normal {
+  font-family: 'Segoe Print', "Lucida Handwriting", serif;
 }
 
 @for $i from 5 through 1 {
