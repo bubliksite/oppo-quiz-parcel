@@ -59,7 +59,7 @@ $('document').ready(function($) {
             if (result[i] == 'C') {C++}
             if (result[i] == 'D') {D++}
         }
-        var listPro = ['Режим Ultra Steady Video 3.0', '5G: новый стандарт скорости', ' Аккумулятор 65 Вт SuperVOOC 2.0', 'Частота обновления экрана 90 Гц']
+        var listPro = ['Режим Ultra Steady Video 3.0', '5G: новый стандарт скорости', ' Быстра зарядка 65 Вт SuperVOOC 2.0', 'Частота обновления экрана 90 Гц']
         var listLite = ['Камера с ИИ и 6 объективами', 'Экран Full HD+ с диагональю 6.43 дюйма', ' Тонкий и легкий корпус', '18 Вт быстрая зарядка']
         function listingPro() {
             for (let i = 0; i < listPro.length; i++) {

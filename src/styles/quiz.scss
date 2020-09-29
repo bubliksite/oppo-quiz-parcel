@@ -195,6 +195,9 @@
           padding-right: 2rem;
           padding-top: 1rem;
           align-self: start;
+          img {
+            object-fit: contain;
+          }
         }
         #result-share {
           img {
