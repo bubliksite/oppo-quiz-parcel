@@ -29,7 +29,7 @@
                                 <a href="#" class="nav-link">Интернет-магазин</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link">Правила</a>
+                                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link disabled">Правила</a>
                             </li>
                         </ul>
                     </div>
@@ -53,7 +53,7 @@
                 <a href="#" class="nav-link">Интернет-магазин</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link">Правила</a>
+                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link disabled">Правила</a>
             </li>
         </ul>
     </div>
@@ -63,7 +63,7 @@
                 <div>
                     <h1 class="animate__animated animate__fadeInDown">Будь в движении, будь в кадре</h1>
                     <p class="lead pt-2 animate__animated animate__fadeInDown">
-                        <a href="#" data-toggle="modal" data-target="##streamModal" class="font-weight-bold">Смотри презентацию</a> новой серии смартфонов OPPO Reno4!
+                        <a href="#" data-toggle="modal" data-target="#streamModal" class="font-weight-bold">Смотри презентацию</a> новой серии смартфонов OPPO Reno4!
                         <br>
                         Пройди тест и получи шанс выиграть OPPO Reno4 Lite!
                     </p>
@@ -104,6 +104,21 @@
         </div>
     </section>
 
+    <div class="modal fade" id="streamModal" data-backdrop="true" data-keyboard="true" tabindex="-1"
+         aria-labelledby="stramModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden p-3">
+                <button type="button" class="close d-flex align-items-center justify-content-end" data-dismiss="modal" aria-label="Close" style="z-index: 9999">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <div class="video">
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/2T3gXN8j17U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
