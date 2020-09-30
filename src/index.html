@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <meta property="og:image" content="http://korablik.studio/images/oppo/reno4/OPPO-Open-Graph.jpg">
+
     <link rel="icon" href="img/favicon.png" sizes="32x32">
 
     <title>Новая серия смартфонов OPPO Reno4</title>
@@ -85,12 +87,25 @@
             window.open(url, 'Поделиться результатом', 'toolbar=0,status=0,width=626,height=436');
         }
 
+        function pimg_page() {
+            var url = 'http://vkontakte.ru/share.php?url=https://reno4.oppo.ru&noparse=true'
+            window.open(url, 'Поделиться результатом', 'toolbar=0,status=0,width=626,height=436');
+        }
+
     </script>
     <!-- FB SHARE -->
     <script async defer
             crossorigin="anonymous"
             src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v8.0&appId=1045683782552173&autoLogAppEvents=1"
             nonce="P2FH2LZg">
+    </script>
+    <script>
+        function fb_full_share() {
+            FB.ui({
+                method: 'share',
+                href: 'https://reno4.oppo.ru/'
+            })
+        }
     </script>
     <script>
         function handle_fb_data(response){
@@ -426,7 +441,7 @@
     <footer class="py-5 d-none">
         <div class="container text-white">
             <p class="mb-5 text-white">
-                *Представленные на сайте изображения подарков могут отличаться от реальных <br>
+                *Представленные на сайте изображения подарков и смартфонов могут отличаться от реальных <br>
                 **Подробные условия получения подарков на сайте <a href="//oppo.com">oppo.com</a> и <a href="//oppo.ru">oppo.ru</a>
             </p>
             <div class="row">
@@ -448,8 +463,8 @@
                     <div id="share-buttons-footer" class="col-lg-7 d-flex align-items-center">
                         <div class="round-socials-nets d-flex justify-content-around align-items-center">
                             <img id="icon-share" src="img/icon-share.svg" alt="">
-                            <a href="#" ><img src="img/icon-fb-small.svg" alt=""></a>
-                            <a href="#"><img src="img/icon-vk-small.svg" alt=""></a>
+                            <a href="#" onclick="fb_full_share()"><img src="img/icon-fb-small.svg" alt=""></a>
+                            <a href="#" onclick="pimg_page()"><img src="img/icon-vk-small.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -805,7 +820,7 @@
                                                             <img src="img/icon-vk.svg" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="mailto:#" class="btn" style="border-radius: 5px">Обратная связь</a>
+                                                    <a href="mailto:#" class="font-weight-bold pt-3">Обратная связь</a>
                                                 </div>
                                                 <img id="result-phone-img" src="" alt="">
                                             </div>
