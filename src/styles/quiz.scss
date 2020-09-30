@@ -189,16 +189,6 @@
         li {
           font-size: 12px;
         }
-        #result-phone-img {
-          width: 40%;
-          height: 100%;
-          padding-right: 2rem;
-          padding-top: 1rem;
-          align-self: start;
-          img {
-            object-fit: contain;
-          }
-        }
         #result-share {
           img {
             width: 25px;
@@ -224,6 +214,14 @@
     #result-share {
 
     }
+  }
+  #result-phone-img {
+    width: 40%;
+    height: 100%;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    align-self: start;
+    object-fit: contain;
   }
   form {
     .form-group {

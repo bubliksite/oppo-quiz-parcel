@@ -9,6 +9,20 @@
 
     <title>Новая серия смартфонов OPPO Reno4</title>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KD2L32F');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD2L32F"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- VK SHARE -->
     <script src="https://vk.com/js/api/openapi.js?168" type="text/javascript"></script>
     <script>
@@ -36,7 +50,7 @@
 
                     console.log('отправляем JSON');
 
-                    var sendUrl = 'https://reno4.bublik.site/res/vkontakte.php';
+                    var sendUrl = 'https://reno4.oppo.ru/res/vkontakte.php';
                     fetch(sendUrl, {
                         method: "POST",
                         credentials: 'include',
@@ -59,13 +73,13 @@
         function pimg() {
             var textResult = document.getElementById('answerSpan').innerText
             if (textResult == 'контемпорари') {
-                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/AVK.html&noparse=true'
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.oppo.ru/res/AVK.html&noparse=true'
             } else if (textResult == 'брейк-данс') {
-                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/BVK.html&noparse=true'
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.oppo.ru/res/BVK.html&noparse=true'
             } else if (textResult == 'хип-хоп') {
-                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/CVK.html&noparse=true'
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.oppo.ru/res/CVK.html&noparse=true'
             } else if (textResult == 'кизомба') {
-                var url = 'http://vkontakte.ru/share.php?url=https://reno4.bublik.site/res/DVK.html&noparse=true'
+                var url = 'http://vkontakte.ru/share.php?url=https://reno4.oppo.ru/res/DVK.html&noparse=true'
             }
 
             window.open(url, 'Поделиться результатом', 'toolbar=0,status=0,width=626,height=436');
@@ -82,7 +96,7 @@
         function handle_fb_data(response){
             console.log('забираем данные');
             FB.api('/me', function(response) {
-                var sendUrl = 'https://reno4.bublik.site/res/facebook.php';
+                var sendUrl = 'https://reno4.oppo.ru/res/facebook.php';
                 // отправляем данные пользователя
                 fetch(sendUrl, {
                     method: "POST",
@@ -100,7 +114,7 @@
             if (textResult == 'контемпорари') {
                 FB.ui({
                         method: 'share',
-                        href: 'https://reno4.bublik.site/res/A.html',
+                        href: 'https://reno4.oppo.ru/res/A.html',
                     },
                     function(response){
                         fb_login();
@@ -108,7 +122,7 @@
             } else if (textResult == 'брейк-данс') {
                 FB.ui({
                         method: 'share',
-                        href: 'https://reno4.bublik.site/res/B.html',
+                        href: 'https://reno4.oppo.ru/res/B.html',
                     },
                     function(response){
                         fb_login();
@@ -116,7 +130,7 @@
             } else if (textResult == 'хип-хоп') {
                 FB.ui({
                         method: 'share',
-                        href: 'https://reno4.bublik.site/res/C.html',
+                        href: 'https://reno4.oppo.ru/res/C.html',
                     },
                     function(response){
                         fb_login();
@@ -124,7 +138,7 @@
             } else if (textResult == 'кизомба') {
                 FB.ui({
                         method: 'share',
-                        href: 'https://reno4.bublik.site/res/D.html',
+                        href: 'https://reno4.oppo.ru/res/D.html',
                     },
                     function(response){
                         fb_login();
@@ -161,19 +175,19 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarHeadMenu">
                         <ul class="navbar-nav">
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="#product" class="nav-link">Предзаказ</a>
+                                <a href="#product" class="nav-link disabled">Предзаказ</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="#product" class="nav-link">OPPO Reno4 series</a>
+                                <a href="#product" class="nav-link disabled">OPPO Reno4 series</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="" class="nav-link">Где купить</a>
+                                <a href="" class="nav-link disabled">Где купить</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="//oppo.ru/reno4-pro-5g/?utm_source=campaignsite&utm_medium=menubutton&utm_campaign=Reno4ProPorductpage&utm_term=&utm_content=" class="nav-link">Интернет-магазин</a>
+                                <a href="//oppo.ru/reno4-pro-5g/?utm_source=campaignsite&utm_medium=menubutton&utm_campaign=Reno4ProPorductpage&utm_term=&utm_content=" class="nav-link disabled">Интернет-магазин</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link">Правила</a>
+                                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link disabled">Правила</a>
                             </li>
                         </ul>
                     </div>
@@ -185,19 +199,19 @@
         <a href="#0" id="menu-back"><img src="img/menu-arrow.svg" alt="Назад"></a>
         <ul class="navbar-nav">
             <li class="nav-item ml-4">
-                <a href="#product" class="nav-link">Предзаказ</a>
+                <a href="#product" class="nav-link disabled">Предзаказ</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="#product" class="nav-link">OPPO Reno4 series</a>
+                <a href="#product" class="nav-link disabled">OPPO Reno4 series</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="" class="nav-link">Где купить</a>
+                <a href="" class="nav-link disabled">Где купить</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="//oppo.ru/reno4-pro-5g/?utm_source=campaignsite&utm_medium=menubutton&utm_campaign=Reno4ProPorductpage&utm_term=&utm_content=" class="nav-link">Интернет-магазин</a>
+                <a href="//oppo.ru/reno4-pro-5g/?utm_source=campaignsite&utm_medium=menubutton&utm_campaign=Reno4ProPorductpage&utm_term=&utm_content=" class="nav-link disabled">Интернет-магазин</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link">Правила</a>
+                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link disabled">Правила</a>
             </li>
         </ul>
     </div>
@@ -211,7 +225,7 @@
                         <br>
                         Пройди тест и получи шанс выиграть OPPO Reno4 Lite!
                     </p>
-                    <button type="button" class="btn mt-3 animate__animated animate__fadeInDown" data-toggle="modal" data-target="#quizModal">Пройти тест</button>
+                    <button type="button" id="testYourself" class="btn mt-3 animate__animated animate__fadeInDown d-none" data-toggle="modal" data-target="#quizModal">Пройти тест</button>
                 </div>
             </div>
         </div>
@@ -233,7 +247,7 @@
             <img src="img/oppo-sign.png" alt="Oppo Reno Series" id="oppo-sign" class="animate__animated animate__fadeInUp">
         </div>
         <div id="oppo-gift">
-            <a href="#product"><img class="animate__animated animate__fadeIn" src="img/OPPO-GIFT.png" alt="Подарок за предзаказ"></a>
+            <a class="disabled"><img class="animate__animated animate__fadeIn" src="img/OPPO-GIFT.png" alt="Подарок за предзаказ"></a>
         </div>
         <div class="oppo-gift-p">
             <p>*Количество подарков ограничено</p>
@@ -242,7 +256,7 @@
 
     <section id="content">
         <div id="partners">
-            <div class="container h-100">
+            <div class="container h-100 d-none">
                 <div class="d-flex justify-content-between align-items-center h-100" id="scene">
                     <img src="img/eshop.png" alt="Oppo eShop" class="animate__animated animate__fadeInUp">
                     <img src="img/mvideo.svg" alt="Мвидео" class="animate__animated animate__fadeInUp">
@@ -259,7 +273,7 @@
         </div>
     </section>
 
-    <section id="product" class="mb-3">
+    <section id="product" class="mb-3 d-none">
         <div class="container my-4 py-5">
             <div class="row">
                 <div class="col-lg-6 px-4 mb-5">
@@ -409,7 +423,7 @@
         </div>
     </section>
 
-    <footer class="py-5">
+    <footer class="py-5 d-none">
         <div class="container text-white">
             <p class="mb-5 text-white">
                 *Представленные на сайте изображения подарков могут отличаться от реальных <br>
@@ -421,10 +435,10 @@
                         <p class="text-white">Присоединяйтесь к нам в социальных сетях</p>
                     </div>
                     <div class="col-lg-7 d-flex justify-content-between align-items-center">
-                        <a href="#"><img src="img/icon-vk-foot.svg" alt=""></a>
-                        <a href="#"><img src="img/icon-fb-foot.svg" alt=""></a>
-                        <a href="#"><img src="img/icon-instagram.svg" alt=""></a>
-                        <a href="#"><img src="img/icon-youtube.svg" alt=""></a>
+                        <a href="//vk.com/oppo_russia" target="_blank"><img src="img/icon-vk-foot.svg" alt=""></a>
+                        <a href="//www.facebook.com/OPPORussia/" target="_blank"><img src="img/icon-fb-foot.svg" alt=""></a>
+                        <a href="//www.instagram.com/opporussia/" target="_blank"><img src="img/icon-instagram.svg" alt=""></a>
+                        <a href="//www.youtube.com/channel/UCGaE62eZyhTf8WKy3yPnXHA" target="_blank"><img src="img/icon-youtube.svg" alt=""></a>
                     </div>
                 </div>
                 <div id="second-footer-block" class="col-md-4 row mb-5">
@@ -434,7 +448,7 @@
                     <div id="share-buttons-footer" class="col-lg-7 d-flex align-items-center">
                         <div class="round-socials-nets d-flex justify-content-around align-items-center">
                             <img id="icon-share" src="img/icon-share.svg" alt="">
-                            <a href="#"><img src="img/icon-fb-small.svg" alt=""></a>
+                            <a href="#" ><img src="img/icon-fb-small.svg" alt=""></a>
                             <a href="#"><img src="img/icon-vk-small.svg" alt=""></a>
                         </div>
                     </div>
