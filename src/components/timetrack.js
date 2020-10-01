@@ -1,8 +1,8 @@
 $('document').ready(function($) {
     var currentURL = window.location.origin
-    if (currentURL == 'http://reno4.oppo.ru' || currentURL == 'https://reno4.oppo.ru') {
+    if (currentURL == 'http://reno4.oppo.ru' || currentURL == 'https://reno4.oppo.ru' || currentURL == 'https://www.reno4.oppo.ru') {
         if (Date.now() > '1601542800000') {
-            $('.nav-link a').removeClass('disabled')
+            $('.nav-link').removeClass('disabled')
             $('#testYourself').removeClass('d-none')
             $('#oppo-gift a').attr('href', '#product')
             $('#product').removeClass('d-none')

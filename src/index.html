@@ -111,6 +111,7 @@
         function handle_fb_data(response){
             console.log('забираем данные');
             FB.api('/me', function(response) {
+                console.log(response);
                 var sendUrl = 'https://reno4.oppo.ru/res/facebook.php';
                 // отправляем данные пользователя
                 fetch(sendUrl, {
@@ -119,6 +120,7 @@
                     headers: {'Content-Type': 'application/json;charset=utf-8'},
                     body:  JSON.stringify(response)
                 })
+
 
             });
         };
@@ -202,7 +204,7 @@
                                 <a href="//oppo.ru/reno4-pro-5g/?utm_source=campaignsite&utm_medium=menubutton&utm_campaign=Reno4ProPorductpage&utm_term=&utm_content=" class="nav-link disabled">Интернет-магазин</a>
                             </li>
                             <li class="nav-item ml-4 animate__animated animate__fadeInDown">
-                                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link disabled">Правила</a>
+                                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" target="_blank" class="nav-link disabled">Правила</a>
                             </li>
                         </ul>
                     </div>
@@ -226,7 +228,7 @@
                 <a href="//oppo.ru/reno4-pro-5g/?utm_source=campaignsite&utm_medium=menubutton&utm_campaign=Reno4ProPorductpage&utm_term=&utm_content=" class="nav-link disabled">Интернет-магазин</a>
             </li>
             <li class="nav-item ml-4">
-                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" class="nav-link disabled">Правила</a>
+                <a href="docs/Правила%20конкурса_OPPO_FINAL.pdf" target="_blank" class="nav-link disabled">Правила</a>
             </li>
         </ul>
     </div>
@@ -389,7 +391,7 @@
                             <h3 class="font-weight-bold mb-5">Узнайте больше о OPPO Reno4</h3>
                         </div>
                         <div class="col-lg-3 col-6 align-self-end">
-                            <a href="//4pda.ru/oppo" class="text-center">
+                            <a href="//4pda.ru/?p=376316&preview=true" target="_blank" class="text-center">
                                 <div>
                                     <img src="img/4pda-logo%201.png" alt="">
                                 </div>
@@ -400,7 +402,7 @@
                             </a>
                         </div>
                         <div class="col-lg-3 col-6 align-self-end">
-                            <a href="//oppo.hi-tech.mail.ru/" class="text-center">
+                            <a href="//hi-tech.mail.ru/review/reno4_lite-rev/" target="_blank" class="text-center">
                                 <div>
                                     <img src="img/mail_hi-tech%201.png" alt="">
                                 </div>
@@ -411,7 +413,7 @@
                             </a>
                         </div>
                         <div class="col-lg-3 col-6 align-self-end">
-                            <a href="//life.ru/" class="text-center">
+                            <a href="//life.ru/" target="_blank" class="text-center">
                                 <div>
                                     <img src="img/life.svg" alt="">
                                 </div>
@@ -422,7 +424,7 @@
                             </a>
                         </div>
                         <div class="col-lg-3 col-6 align-self-end">
-                            <a href="//www.youtube.com/user/3BEPbEnokia" class="text-center">
+                            <a href="//www.youtube.com/watch?v=4RmUgO1WP0g&feature=youtu.be" target="_blank" class="text-center">
                                 <div>
                                     <img src="img/unnamed.jpg" alt="">
                                 </div>
@@ -820,7 +822,7 @@
                                                             <img src="img/icon-vk.svg" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="mailto:#" class="font-weight-bold pt-3">Обратная связь</a>
+                                                    <a href="mailto:info@oppo.ru" class="font-weight-bold pt-3">Обратная связь</a>
                                                 </div>
                                                 <img id="result-phone-img" src="" alt="">
                                             </div>
@@ -844,7 +846,7 @@
                 </button>
                 <div class="modal-body">
                     <div class="video">
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/UJhGRH62wnA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/cgqfVBewCrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -860,7 +862,7 @@
                 </button>
                 <div class="modal-body">
                     <div class="video">
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/ZeVKkqE8bjM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/UWyCSxEoy4Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
