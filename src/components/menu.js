@@ -12,4 +12,10 @@ $('document').ready(function($) {
         $('#main').css('transform', 'translateX(0)');
         $('#content').css('transform', 'translateX(0)');
     })
+    $('#mobile-menu .nav-link').click(function () {
+        $('#mobile-menu').css('transform', 'translateX(0)');
+        $('header').css('transform', 'translateX(0)');
+        $('#main').css('transform', 'translateX(0)');
+        $('#content').css('transform', 'translateX(0)');
+    })
 })
