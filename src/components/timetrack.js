@@ -8,12 +8,12 @@ $('document').ready(function($) {
             $('#product').removeClass('d-none')
             $('footer').removeClass('d-none')
         }
-        if (Date.now() > '1601618400000') {
-            //$('#partners div').removeClass('d-none')
-            //$('.nav-item').removeClass('d-none')
-        }
-        if (Date.now() > '1602187200000') {
-            //Действия на 23:00 08.10.20 (запуск продаж)
+        if (Date.now() > '1602169200000') {
+            $('#partners div').removeClass('d-none')
+            $('.nav-item').removeClass('d-none')
+            $('.changeBuy').text('Купить')
+            $('.old-image').addClass('d-none')
+            $('.new-image').removeClass('d-none')
         }
         if (Date.now() > '1604178000000') {
             //Действия на 00:00 01.11.20 (окончание акции)
@@ -26,5 +26,8 @@ $('document').ready(function($) {
         $('#product').removeClass('d-none')
         $('footer').removeClass('d-none')
         $('#partners div').removeClass('d-none')
+        $('.changeBuy').text('Купить')
+        $('.old-image').addClass('d-none')
+        $('.new-image').removeClass('d-none')
     }
 })
