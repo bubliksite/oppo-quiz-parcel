@@ -10,8 +10,6 @@ $('document').ready(function($) {
         }
         if (Date.now() > '1602169200000') {
             $('#partners div').removeClass('d-none')
-            $('.nav-item').removeClass('d-none')
-            $('.changeBuy').text('Купить')
             $('.old-image').addClass('d-none')
             $('.new-image').removeClass('d-none')
         }
@@ -20,13 +18,11 @@ $('document').ready(function($) {
         }
     } else {
         $('.nav-link').removeClass('disabled')
-        $('.nav-item').removeClass('d-none')
         $('#testYourself').removeClass('d-none')
         $('#oppo-gift a').attr('href', '#product')
         $('#product').removeClass('d-none')
         $('footer').removeClass('d-none')
         $('#partners div').removeClass('d-none')
-        $('.changeBuy').text('Купить')
         $('.old-image').addClass('d-none')
         $('.new-image').removeClass('d-none')
     }
