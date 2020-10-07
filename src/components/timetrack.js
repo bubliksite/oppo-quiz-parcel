@@ -12,6 +12,7 @@ $('document').ready(function($) {
             $('#partners div').removeClass('d-none')
             $('.old-image').addClass('d-none')
             $('.new-image').removeClass('d-none')
+            $('.changeBuy').text('Купить')
         }
         if (Date.now() > '1604178000000') {
             //Действия на 00:00 01.11.20 (окончание акции)
@@ -25,5 +26,6 @@ $('document').ready(function($) {
         $('#partners div').removeClass('d-none')
         $('.old-image').addClass('d-none')
         $('.new-image').removeClass('d-none')
+        $('.changeBuy').text('Купить')
     }
 })
